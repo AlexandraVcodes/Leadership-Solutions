@@ -23,8 +23,9 @@ body {
 
 h1 {
   color: #2b324d;
-  font-family: "The Nautigal";
   font-weight: 700;
+  width: 900px;
+  padding: 10px;
 }
 
 .header-sabine {
