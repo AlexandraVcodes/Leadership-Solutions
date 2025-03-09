@@ -1,0 +1,33 @@
+.lavishly-yours-regular {
+  font-family: "Lavishly Yours", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.the-nautigal-regular {
+  font-family: "The Nautigal", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.the-nautigal-bold {
+  font-family: "The Nautigal", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  color: #2b324d;
+  background-color: #cbb26a;
+}
+
+h1 {
+  color: #2b324d;
+  font-family: "The Nautigal";
+  font-weight: 700;
+}
+
+.header-sabine {
+  height: 600px;
+  width: 900px;
+}
