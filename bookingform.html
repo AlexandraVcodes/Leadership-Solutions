@@ -15,10 +15,14 @@
 
       h1 {
         color: #2b324d;
+        font-size: 1.8em;
+        text-align: center;
       }
 
       h2 {
         color: #be9e44;
+        font-size: 1.4em;
+        text-align: center;
       }
 
       form {
@@ -28,6 +32,7 @@
         border: 1px solid #ddd;
         border-radius: 8px;
         background-color: #f9f9f9;
+        box-sizing: border-box;
       }
 
       label {
@@ -45,6 +50,7 @@
         border: 1px solid #ccc;
         border-radius: 4px;
         font-size: 1em;
+        box-sizing: border-box;
       }
 
       button {
@@ -55,10 +61,26 @@
         font-size: 1em;
         cursor: pointer;
         border-radius: 4px;
+        width: 100%;
       }
 
       button:hover {
         background-color: #a98333;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 10px;
+        }
+
+        form {
+          padding: 15px;
+        }
+
+        h1,
+        h2 {
+          font-size: 1.5em;
+        }
       }
     </style>
   </head>
