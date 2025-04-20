@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+    <html lang="de">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>1:1 Coaching Terminbuchung</title>
+        <style>
+          body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            color: #2b324d;
+            margin: 0;
+            padding: 20px;
+          }
+
+          h1 {
+            color: #2b324d;
+          }
+
+          h2 {
+            color: #be9e44;
+          }
+
+          form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+          }
+
+          label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+          }
+
+          input,
+          textarea,
+          select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+          }
+
+          button {
+            background-color: #be9e44;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 4px;
+          }
+
+          button:hover {
+            background-color: #a98333;
+          }
+        </style>
+      </head>
+      <body>
+        <h1>1:1 Coaching buchen</h1>
+        <h2>Dein persönlicher Termin</h2>
+
+        <form id="bookingForm">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">E-Mail</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="date">Wunschtermin</label>
+          <input type="date" id="date" name="date" required />
+
+          <label for="time">Uhrzeit</label>
+          <input type="time" id="time" name="time" required />
+
+          <label for="message">Anmerkungen (optional)</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <button type="submit">Jetzt Termin buchen</button>
+        </form>
+
+        <script>
+          document
+            .getElementById("bookingForm")
+            .addEventListener("submit", function (e) {
+              e.preventDefault();
+
+              const name = document.getElementById("name").value;
+              const email = document.getElementById("email").value;
+              const date = document.getElementById("date").value;
+              const time = document.getElementById("time").value;
+              const message = document.getElementById("message").value;
+
+              const mailtoLink =
+                `mailto:slinhart@leadership-solutions.at` +
+                `?subject=Neue%20Coaching-Terminbuchung` +
+                `&body=Name: ${encodeURIComponent(name)}%0D%0A` +
+                `E-Mail: ${encodeURIComponent(email)}%0D%0A` +
+                `Wunschtermin: ${encodeURIComponent(
+                  date
+                )} um ${encodeURIComponent(time)} Uhr%0D%0A` +
+                `Anmerkungen: ${encodeURIComponent(message)}`;
+
+              window.location.href = mailtoLink;
+            });
+        </script>
+      </body>
+    </html>
+    , initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
