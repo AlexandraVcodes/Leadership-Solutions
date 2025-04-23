@@ -17,6 +17,98 @@
       integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
       crossorigin="anonymous"
     ></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 1rem;
+        background-color: #f9f9f9;
+        color: #2b324d;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: auto;
+      }
+
+      h2 {
+        color: #be9e44;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: 2rem;
+      }
+
+      .kunden-helfen {
+        margin-top: 1rem;
+        font-weight: 600;
+        font-size: 1.3rem;
+      }
+
+      .leitsatz {
+        background-color: #fff8e1;
+        padding: 1rem;
+        border-left: 4px solid #be9e44;
+        margin: 2rem 0;
+        font-size: 1.1rem;
+      }
+
+      .section {
+        margin-bottom: 2rem;
+      }
+
+      .wert {
+        margin-bottom: 1.5rem;
+      }
+
+      .wert h3 {
+        margin: 0;
+        font-size: 1.2rem;
+        color: #2b324d;
+      }
+
+      .wert p {
+        margin: 0.3rem 0 0;
+        font-size: 1rem;
+      }
+
+      ul {
+        padding-left: 1.5rem;
+      }
+
+      .slide-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease-out;
+      }
+
+      .slide-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 600px) {
+        h2 {
+          font-size: 1.3rem;
+        }
+
+        .kunden-helfen {
+          font-size: 1.1rem;
+        }
+
+        .wert h3 {
+          font-size: 1.1rem;
+        }
+
+        .wert p {
+          font-size: 0.95rem;
+        }
+
+        ul {
+          padding-left: 1rem;
+        }
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -110,30 +202,93 @@
       class="img-fluid rounded header-sabine"
     />
     <h3 class="kunden-helfen">Meine Mission</h3>
-    Ich bin Sabine Linhart und ich begleite Führungskräfte, Teams und
-    Unternehmen dabei, eine moderne und authentische Führungskultur zu
-    entwickeln. <br />
-    Mit
-    <strong>Empathie, strategischer Weitsicht und praxisnahen Methoden</strong>
-    unterstütze ich sie dabei, ihr volles Potenzial zu entfalten, Teams zu
-    stärken und nachhaltige Erfolge zu erzielen. <br />
-    <br />
-    <strong
-      >Meine Mission ist es, Leadership greifbar und wirksam zu machen </strong
-    >- durch individuelles Coaching, strategische Beratung und transformative
-    Workshops. <br />
-    <br />
+    <p>
+      Ich bin Sabine Linhart und ich begleite Führungskräfte, Teams und Unternehmen dabei, eine moderne und authentische
+      Führungskultur zu entwickeln.<br />
+      Mit <strong>Empathie, strategischer Weitsicht und praxisnahen Methoden</strong> unterstütze ich sie dabei, ihr volles
+      Potenzial zu entfalten, Teams zu stärken und nachhaltige Erfolge zu erzielen.<br /><br />
+      <strong>Meine Mission ist es, Leadership greifbar und wirksam zu machen</strong> – durch individuelles Coaching, strategische Beratung
+      und transformative Workshops.<br /><br />
+    </p>
 
     <div class="leitsatz">
-      <strong
-        >Ich helfe meinen Kunden, ihren eigenen Weg als Führungskraft zu finden
-        und mit Klarheit, Mut und Weitsicht zu gehen.</strong
-      >
+      <strong>Ich helfe meinen Kunden, ihren eigenen Weg als Führungskraft zu finden und mit Klarheit, Mut und Weitsicht zu gehen.</strong>
     </div>
-    <h3 class="kunden-helfen">Meine Werte</h3>
-    <p>....</p>
-    <h3 class="kunden-helfen">Mein Werdegang</h3>
-    <p>....</p>
+
+    <!-- Werte -->
+    <div class="section" id="werte">
+      <div class="wert slide-in">
+        <h3>Female Empowerment</h3>
+        <p>Ich setze mich leidenschaftlich dafür ein, Frauen in Führungspositionen zu stärken…</p>
+      </div>
+      <div class="wert slide-in">
+        <h3>Freiheit & Selbstbestimmtheit</h3>
+        <p>Ich glaube daran, dass wahre Führung nur dann entsteht, wenn Menschen sich selbst treu bleiben…</p>
+      </div>
+      <div class="wert slide-in">
+        <h3>Nachhaltigkeit</h3>
+        <p>Für mich bedeutet Leadership nicht kurzfristige Erfolge, sondern nachhaltige Veränderung…</p>
+      </div>
+      <div class="wert slide-in">
+        <h3>Erfolg & Wohlstand</h3>
+        <p>Erfolgreiche Führung bedeutet für mich, sowohl persönliche als auch unternehmerische Ziele zu erreichen…</p>
+      </div>
+      <div class="wert slide-in">
+        <h3>Klarheit</h3>
+        <p>Ich bin überzeugt, dass gute Führung Klarheit braucht…</p>
+      </div>
+      <div class="wert slide-in">
+        <h3>Wirkung</h3>
+        <p>Mir geht es nicht um leere Theorien, sondern um echte Veränderung…</p>
+      </div>
+      <div class="wert slide-in">
+        <h3>Empathie</h3>
+        <p>Ich verstehe, dass jede Führungskraft, jedes Team und jedes Unternehmen einzigartig ist…</p>
+      </div>
+      <div class="wert slide-in">
+        <h3>Struktur & Ordnung</h3>
+        <p>Gute Führung braucht nicht nur Visionen, sondern auch eine klare Struktur…</p>
+      </div>
+    </div>
+
+    <!-- Werdegang -->
+    <h2>Mein Werdegang</h2>
+    <div class="section" id="werdegang">
+      <h3>Qualifikationen</h3>
+      <ul>
+        <li class="slide-in">Dipl. Coach (derzeit in Ausbildung)</li>
+        <li class="slide-in">Dipl. Mentaltrainerin</li>
+        <li class="slide-in">Wirtschaftsprüferin</li>
+      </ul>
+
+      <h3>Berufliche Stationen</h3>
+      <ul>
+        <li class="slide-in">Selbständige Unternehmensberaterin</li>
+        <li class="slide-in">Geschäftsführerin</li>
+        <li class="slide-in">Abteilungsleiterin Rechnungswesen, ESG-Reporting und Konsolidierung</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll(".slide-in");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      elements.forEach(el => observer.observe(el));
+    });
+  </script>
 
     <br />
     <div class="social-media-icons">
