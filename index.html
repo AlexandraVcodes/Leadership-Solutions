@@ -162,18 +162,106 @@
       <br/>
 
         <div class="imprint-footer">
-     
-      
-        <a href="https://www.naturalbeauty-baden.at/" class="impressum-link">Impressum & Datenschutz</a>
-      
-    
-    </div>
-    <div class="social-media-icons">
-      <a href="https://www.linkedin.com/in/sabine-linhart-409a4997/">
-      <img src="images/Icons/linkedin-512.webp" class="linkedin-icon" alt="Linkedin Logo"></a>
-      <a href="https://www.instagram.com/sabine.linhart_lebe.stark/">
-      <img src="images/Icons/icon instagram.png" class="ig-icon" alt="Instagram Logo"></a>
-    </div>
+
+          <!-- Font Awesome CDN einbinden -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+  footer.social-footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    font-family: sans-serif;
+  }
+
+  .social-footer p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    font-size: 2rem;
+    transition: transform 0.2s ease;
+  }
+
+  .social-icons a:hover {
+    transform: scale(1.2);
+  }
+
+  .fa-linkedin {
+    color: #0a66c2;
+  }
+
+  .fa-instagram {
+    color: #e1306c;
+  }
+
+  .impressum-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+    text-decoration:underline;
+  }
+
+  .impressum-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Screenreader only */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  @media (max-width: 480px) {
+    .social-icons {
+      gap: 15px;
+    }
+    .social-footer p {
+      font-size: 0.95rem;
+    }
+    .social-icons a {
+      font-size: 1.8rem;
+    }
+    .impressum-link {
+      font-size: 0.85rem;
+    }
+  }
+</style>
+
+<footer class="social-footer">
+  <p>Folge mir auf Social Media:</p>
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/in/sabine-linhart-409a4997/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <i class="fab fa-linkedin" aria-hidden="true"></i>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+    <a href="https://www.instagram.com/sabine.linhart_lebe.stark/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+      <i class="fab fa-instagram" aria-hidden="true"></i>
+      <span class="sr-only">Instagram</span>
+    </a>
+  </div>
+  <a href="https://leadership-solutions.at/" class="impressum-link" target="_blank" rel="noopener noreferrer">
+    Impressum & Datenschutz
+  </a>
+
   </body>
   </body>
 </html>
