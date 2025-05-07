@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kontaktformular für Leadership Solutions"
+    />
+    <title>Kontaktformular</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f3f4f6;
+        padding: 15px;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 800px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+      .image-container {
+        flex: 1;
+        max-width: 300px;
+        margin-right: 20px;
+      }
+      .image-container img {
+        width: 100%;
+        border-radius: 12px;
+      }
+      .contact-form-container {
+        flex: 2;
+      }
+      h2 {
+        margin-bottom: 15px;
+        font-size: 24px;
+        text-align: center;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+      button {
+        background-color: #0073e6;
+        color: #fff;
+        border: none;
+        padding: 12px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s;
+        width: 100%;
+        font-size: 16px;
+      }
+      button:hover {
+        background-color: #005bb5;
+      }
+      #feedback {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          align-items: center;
+        }
+        .image-container {
+          margin-bottom: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-container">
+        <img src="ninaromana-sabinelinhart20.jpg" alt="Kontaktbild" />
+      </div>
+      <div class="contact-form-container">
+        <h2>Kontaktieren Sie uns</h2>
+        <form method="post">
+          <input type="text" name="name" placeholder="Ihr Name" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="Ihre E-Mail-Adresse"
+            required
+          />
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Ihre Nachricht"
+            required
+          ></textarea>
+          <button type="submit">Nachricht senden</button>
+        </form>
+        <p id="feedback">
+          <?php
+                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                    $name = htmlspecialchars($_POST['name']);
+                    $email = htmlspecialchars($_POST['email']);
+                    $message = htmlspecialchars($_POST['message']);
+
+                    $recipient = 'slinhart@leadership-solutions.at';
+                    $subject = 'Neue Nachricht über das Kontaktformular';
+                    $email_content = "Name: $name\nE-Mail: $email\n\nNachricht:\n$message\n";
+                    $headers = "From: $email\r\nReply-To: $email\r\n";
+
+                    if (mail($recipient, $subject, $email_content, $headers)) {
+                        echo 'Ihre Nachricht wurde erfolgreich gesendet!';
+                    } else {
+                        echo 'Es gab ein Problem beim Senden der Nachricht. Bitte versuchen Sie es später noch einmal.';
+                    }
+                }
+                ?>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
