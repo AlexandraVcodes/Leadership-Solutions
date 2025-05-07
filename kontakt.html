@@ -20,6 +20,7 @@
       integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="sources/style.css" />
     <style>
       body {
@@ -43,8 +44,10 @@
         flex: 1;
         max-width: 350px;
       }
+
       .image-container img {
-        width: 100%;
+        width: 300px;
+        height: 300px;
         border-radius: 12px;
       }
       .contact-form-container {
@@ -73,11 +76,11 @@
         border-radius: 8px;
         font-size: 16px;
       }
-      button {
+      .btn {
         background-color: #be9e44;
         color: #2b324d;
         border: none;
-        padding: 10px 20px;
+        padding: 8px 15px;
         border-radius: 8px;
         cursor: pointer;
         transition: background 0.3s;
@@ -109,7 +112,85 @@
           max-width: 100%;
           margin-bottom: 15px;
         }
+        
       }
+      footer.social-footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    font-family: sans-serif;
+  }
+
+  .social-footer p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    font-size: 2rem;
+    transition: transform 0.2s ease;
+  }
+
+  .social-icons a:hover {
+    transform: scale(1.2);
+  }
+
+  .fa-linkedin {
+    color: #0a66c2;
+  }
+
+  .fa-instagram {
+    color: #e1306c;
+  }
+
+  .impressum-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+    text-decoration:underline;
+  }
+
+  .impressum-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Screenreader only */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  @media (max-width: 480px) {
+    .social-icons {
+      gap: 15px;
+    }
+    .social-footer p {
+      font-size: 0.95rem;
+    }
+    .social-icons a {
+      font-size: 1.8rem;
+    }
+    .impressum-link {
+      font-size: 0.85rem;
+    }
+  }
     </style>
   </head>
   <body>
@@ -202,6 +283,7 @@
 
             <button type="submit" class="btn">Nachricht senden</button>
           </form>
+          <br />
           <p><span class="required">*</span> Pflichtfeld</p>
           <div class="contact-details" style="text-align: center">
             <p>Gerne kannst du mich auch telefonisch unter:</p>
@@ -220,5 +302,21 @@
         </div>
       </div>
     </div>
+    <footer class="social-footer">
+  <p>Folge mir auf Social Media:</p>
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/in/sabine-linhart-409a4997/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <i class="fab fa-linkedin" aria-hidden="true"></i>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+    <a href="https://www.instagram.com/sabine.linhart_lebe.stark/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+      <i class="fab fa-instagram" aria-hidden="true"></i>
+      <span class="sr-only">Instagram</span>
+    </a>
+  </div>
+  <a href="https://leadership-solutions.at/" class="impressum-link" target="_blank" rel="noopener noreferrer">
+    Impressum & Datenschutz
+  </a>
+
   </body>
 </html>
