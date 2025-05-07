@@ -87,49 +87,23 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="image-container">
-        <img src="ninaromana-sabinelinhart20.jpg" alt="Kontaktbild" />
-      </div>
-      <div class="contact-form-container">
-        <h2>Kontaktieren Sie uns</h2>
-        <form method="post">
-          <input type="text" name="name" placeholder="Ihr Name" required />
-          <input
-            type="email"
-            name="email"
-            placeholder="Ihre E-Mail-Adresse"
-            required
-          />
-          <textarea
-            name="message"
-            rows="5"
-            placeholder="Ihre Nachricht"
-            required
-          ></textarea>
-          <button type="submit">Nachricht senden</button>
-        </form>
-        <p id="feedback">
-          <?php
-                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                    $name = htmlspecialchars($_POST['name']);
-                    $email = htmlspecialchars($_POST['email']);
-                    $message = htmlspecialchars($_POST['message']);
-
-                    $recipient = 'slinhart@leadership-solutions.at';
-                    $subject = 'Neue Nachricht über das Kontaktformular';
-                    $email_content = "Name: $name\nE-Mail: $email\n\nNachricht:\n$message\n";
-                    $headers = "From: $email\r\nReply-To: $email\r\n";
-
-                    if (mail($recipient, $subject, $email_content, $headers)) {
-                        echo 'Ihre Nachricht wurde erfolgreich gesendet!';
-                    } else {
-                        echo 'Es gab ein Problem beim Senden der Nachricht. Bitte versuchen Sie es später noch einmal.';
-                    }
-                }
-                ?>
-        </p>
-      </div>
+     <div class="container">
+        <div class="image-container">
+            <img src="images/ninaromana-sabinelinhart20.jpg" alt="Kontaktbild">
+        </div>
+        <div class="contact-form-container">
+            <h2>Kontaktieren Sie mich</h2>
+            <form action="send_email.php" method="post">
+                <input type="text" name="name" placeholder="Ihr Name" required>
+                <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
+                <textarea name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
+                <button type="submit">Nachricht senden</button>
+            </form>
+            <p id="feedback"></p>
+        </div>
     </div>
+</body>
+</html>
+
   </body>
 </html>
