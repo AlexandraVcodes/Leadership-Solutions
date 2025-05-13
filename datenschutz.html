@@ -8,6 +8,19 @@
       content="Datenschutzerklärung der Webseite von Mag. (FH) Sabine Linhart e.U."
     />
     <title>Datenschutzerklärung</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -90,51 +103,401 @@
           font-size: 0.95em;
         }
       }
+      footer.social-footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    font-family: sans-serif;
+  }
+
+  .social-footer p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    font-size: 2rem;
+    transition: transform 0.2s ease;
+  }
+
+  .social-icons a:hover {
+    transform: scale(1.2);
+  }
+
+  .fa-linkedin {
+    color: #0a66c2;
+  }
+
+  .fa-instagram {
+    color: #e1306c;
+  }
+
+  .impressum-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+    text-decoration:underline;
+  }
+
+  .impressum-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Screenreader only */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  @media (max-width: 480px) {
+    .social-icons {
+      gap: 15px;
+    }
+    .social-footer p {
+      font-size: 0.95rem;
+    }
+    .social-icons a {
+      font-size: 1.8rem;
+    }
+    .impressum-link {
+      font-size: 0.85rem;
+    }
+    footer.social-footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    font-family: sans-serif;
+  }
+
+  .social-footer p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    font-size: 2rem;
+    transition: transform 0.2s ease;
+  }
+
+  .social-icons a:hover {
+    transform: scale(1.2);
+  }
+
+  .fa-linkedin {
+    color: #0a66c2;
+  }
+
+  .fa-instagram {
+    color: #e1306c;
+  }
+
+  .impressum-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+    text-decoration:underline;
+  }
+
+  .impressum-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Screenreader only */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  @media (max-width: 480px) {
+    .social-icons {
+      gap: 15px;
+    }
+    .social-footer p {
+      font-size: 0.95rem;
+    }
+    .social-icons a {
+      font-size: 1.8rem;
+    }
+    .impressum-link {
+      font-size: 0.85rem;
+    }
+  }
+  }
     </style>
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a
+            class="navbar-brand"
+            href="https://www.https://www.naturalbeauty-baden.at/"
+          >
+            <img
+              src="images/Logo_Navbar_klein.jpg"
+              alt="Logo Leadership Solutions"
+              class="navbar-logo"
+              width="180"
+              height="50"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="index.html"
+                  target="_blank"
+                  >Willkommen</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="ueber mich.html"
+                  target="_blank"
+                  >Über mich</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="coaching.html"
+                  target="_blank"
+                  >Leistungen</a
+                >
+              </li>
+              
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="kontakt.html"
+                  target="_blank"
+                  >Kontakt</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     <div class="datenschutz-container">
       <h1>Datenschutzerklärung</h1>
       <p>
         In folgender Datenschutzerklärung werden Sie über die wichtigsten
-        Aspekte der Datenverarbeitung im Rahmen dieser Webseite informiert...
+        Aspekte der Datenverarbeitung im Rahmen dieser Webseite informiert. <br/>
+        Personenbezogene Daten werden nur auf Grundlage der gesetzlichen Bestimmungen (Datenschutzgrundverordnung, Telekommunikationsgesetz 2003) erhoben und verarbeitet. <br/>
+        <br/>
+        Sobald Sie als Benutzer auf diese Webseite zugreifen oder diese besuchen wird Ihre IP-Adresse, Beginn sowie Beginn und Ende der Sitzung erfasst. Dies ist technisch bedingt und stellt somit ein berechtigtes Interesse iSv Art 6 Abs 1 lit f DSGVO.
       </p>
       <p>
         <strong>Kontakt mit uns</strong><br />Wenn Sie uns, entweder über unser
-        Kontaktformular auf dieser Webseite, oder per Email kontaktieren...
+        Kontaktformular auf dieser Webseite, oder per Email kontaktieren, dann werden die von Ihnen an uns übermittelten Daten zwecks Bearbeitung Ihrer Anfrage oder für den Fall von weiteren Anschlussfragen für sechs Monate bei uns gespeichert. Es erfolgt, ohne Ihre Einwilligung, keine Weitergabe Ihrer übermittelten Daten. <br/>
       </p>
       <p>
         <strong>Cookies</strong><br />Diese Website verwendet so genannte
-        Cookies...
+        Cookies.<br/>
+        Dabei handelt es sich um kleine Textdateien, die mit Hilfe des Browsers auf Ihrem Endgerät abgelegt werden. Sie richten keinen Schaden an. Wir nutzen Cookies dazu, unser Angebot nutzerfreundlich zu gestalten. Einige Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen. Sie ermöglichen es uns, Ihren Browser beim nächsten Besuch wiederzuerkennen. Wenn Sie dies nicht wünschen, so können Sie Ihren Browser so einrichten, dass er Sie über das Setzen von Cookies informiert und Sie dies nur im Einzelfall erlauben. <br/> 
+        Bei der Deaktivierung von Cookies kann die Funktionalität unserer Website eingeschränkt sein.
       </p>
       <p>
         <strong>Google Maps</strong><br />Diese Website verwendet Funktionen des
-        Webkartendienstes „Google Maps“...
+        Webkartendienstes „Google Maps“. Der Dienstanbieter dieser Funktion ist:<br/>
+        <ul>
+            <li>Google Ireland Limited Gordon House, Barrow Street Dublin 4. Ireland. Tel: +353 1 543 1000</li>
+        </ul>
+        <br/>
+        Im Zuge der Nutzung von Google Maps ist es notwendig Ihre IP-Adresse zu speichern und zu verarbeiten. <br/>
+        Google überträgt in der Regel an einen Server in den USA und speichert die Daten dort. <br/>
+        Die Verarbeitung geschieht durch den Diensteanbieter (oben genannt), der Betreiber dieser Homepage hat keinen Einfluss auf die Übertragung der Daten.<br/>
+        <br/>
+        Die Datenverarbeitung erfolgt auf Basis der gesetzlichen Bestimmungen des § 96 Abs 3 TKG sowie des Art 6 Abs 1 lit f (berechtigtes Interesse) der DSGVO. <br/>
+        Die Nutzung von Google Maps erhöht die Auffindbarkeit der Orte, welche auf unserer Webseite bereitgestellt werden. <br/> 
+        Weitere Informationen über den Umgang mit Nutzerdaten des Diensteanbieters „Google“ können Sie der Datenschutzerklärung entnehmen: <br/>
+        <a href="https://policies.google.com/privacy?hl=de">Google Policy Deutsch</a>
+        <br/>
+        Google verarbeitet die Daten auch in den USA, hat sich jedoch dem EU-US Privacy-Shield unterworfen.<br/>
+        <a href="https://www.privacyshield.gov/EU-US-Framework">EU-US Privacy-Shield</a>
+
+
       </p>
       <p>
         <strong>Google Fonts</strong><br />Diese Website verwendet Schriftarten
-        von „Google Fonts“...
+        von „Google Fonts“. Der Dienstanbieter dieser Funktion ist: <br/>
+        <ul>
+            <li>Google Ireland Limited Gordon House, Barrow Street Dublin 4. Ireland. Tel: +353 1 543 1000</li>
+        </ul>
+        <br/>
+        Beim Aufrufen dieser Webseite lädt Ihr Browser Schriftarten und speichert diese in den Cache. <br/>
+        Da Sie, als Besucher der Webseite, Daten des Dienstanbieters empfangen kann Google unter Umständen Cookies auf Ihrem Rechner setzen oder analysieren. <br/>
+        Die Nutzung von „Google-Fonts“ dient der Optimierung unserer Dienstleistung und der einheitlichen Darstellung von Inhalten. <br/>
+        Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar. <br/>
+        Weitere Informationen zu Google Fonts erhalten Sie unter folgendem Link:<br/>
+
+        <a href="https://developers.google.com/fonts/faq">FAQ Google Fonts</a>
+        <br/>
+        Weitere Informationen über den Umgang mit Nutzerdaten von Google können Sie der Datenschutzerklärung entnehmen: <br/>
+        <a href="https://policies.google.com/privacy?hl=de"></a>
+        Google verarbeitet die Daten auch in den USA, hat sich jedoch dem EU-US Privacy-Shield unterworfen. <br/>
+        <a href="https://www.privacyshield.gov/EU-US-Framework">EU-US Privacy-Shield</a>
+
       </p>
       <p>
         <strong>Server-Log Files</strong><br />Diese Webseite und der damit
         verbundene Provider erhebt im Zuge der Webseitennutzung automatisch
-        Informationen...
+        Informationen im Rahmen sogenannter "Server-Log-Files". <br/>
+        Dies betrifft insbesondere: <br/>
+        <ul>
+            <li>
+                IP-Adresse oder Hostname 
+            </li>
+            <li>
+                den verwendeten Browser
+            </li>
+            <li>
+                Aufenthaltsdauer auf der Webseite sowie Datum und Uhrzeit
+            </li>
+            <li>
+                aufgerufene Seiten der Webseite
+            </li>
+            <li>
+                Spracheinstellungen und Betriebssystem 
+            </li>
+            <li>
+                „Leaving-Page“ (auf welcher URL hat der Benutzer die Webseite verlassen)
+            </li>
+            <li>
+                ISP (Internet Service Provider)
+            </li>
+        </ul>
+        <br/>
+        Diese erhobenen Informationen werden nicht personenbezogen verarbeitet oder mit personenbezogenen Daten in Verbindung gebracht.<br/>
+        Der Webseitenbetreiber behält es sich vor, im Falle von Bekanntwerden rechtswidriger Tätigkeiten, diese Daten auszuwerten oder zu überprüfen.<br/>
       </p>
       <p>
         <strong>Newsletter</strong><br />Sie haben die Möglichkeit, über unsere
-        Website unseren Newsletter zu abonnieren...
+        Website unseren Newsletter zu abonnieren. <br/>
+        Hierfür benötigen wir Ihre E-Mail-Adresse und ihre Erklärung, dass Sie mit dem Bezug des Newsletters einverstanden sind. <br/>
+
       </p>
       <p>
         <strong>Ihre Rechte als Betroffener</strong><br />Sie als Betroffener
         haben bezüglich Ihrer Daten, welche bei uns gespeichert sind,
-        grundsätzlich ein Recht auf...
+        grundsätzlich ein Recht auf:
+        <ul>
+            <li>
+                Auskunft
+            </li>
+            <li>
+                Löschung der Daten
+            </li>
+            <li>
+                Berichtigung der Daten
+            </li>
+            <li>
+                Übertragbarkeit der Daten
+            </li>
+            <li>
+                Widerruf und Widerspruch zur Datenverarbeitung
+            </li>
+            <li>
+                Einschränkung
+            </li>
+        </ul>
       </p>
+     <p>Wenn Sie vermuten, dass im Zuge der Verarbeitung Ihrer Daten Verstöße gegen das Datenschutzrecht passiert sind, so haben Sie die Möglichkeit, sich bei uns (slinhart@leadership-solutions.at) oder der Datenschutzbehörde zu beschweren.</p> 
+     <p>Sei erreichen uns unter folgenden Kontaktdaten:</p>
       <p>
         <strong>Webseitenbetreiber:</strong> Mag. (FH) Sabine Linhart e.U.<br />
         <strong>Telefonnummer:</strong> +43 664 225 09 39<br />
         <strong>Email:</strong>
-        <a href="mailto:office@lebestark.at">office@lebestark.at</a>
+        <a href="mailto:slinhart@leadership-solutions.at">slinhart@leadership-solutions.at</a>
       </p>
+      <p><strong>Datenschutzbeauftragte: </strong>Mag. (FH) Sabine Linhart <br/>
+      Unsere Datenschutzbeauftragte erreichen Sie unter:<br/>
+      <a href="mailto:slinhart@leadership-solutions.at">slinhart@leadership-solutions.at</a><br/>
+      +43 664 225 09 39</p>
+      
     </div>
+    <footer class="social-footer">
+        <p>Folge mir auf Social Media:</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/sabine-linhart-409a4997/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fab fa-linkedin" aria-hidden="true"></i>
+            <span class="sr-only">LinkedIn</span>
+          </a>
+          <a href="https://www.instagram.com/sabine.linhart_lebe.stark/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+            <span class="sr-only">Instagram</span>
+          </a>
+        </div>
+        <a href="https://leadership-solutions.at/" class="impressum-link" target="_blank" rel="noopener noreferrer">
+          Impressum & Datenschutz
+        </a>
+        <footer class="social-footer">
+            <p>Folge mir auf Social Media:</p>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/sabine-linhart-409a4997/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                <span class="sr-only">LinkedIn</span>
+              </a>
+              <a href="https://www.instagram.com/sabine.linhart_lebe.stark/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+                <span class="sr-only">Instagram</span>
+              </a>
+            </div>
+            <a href="https://leadership-solutions.at/" class="impressum-link" target="_blank" rel="noopener noreferrer">
+              Impressum & Datenschutz
+            </a>
+          
   </body>
 </html>
