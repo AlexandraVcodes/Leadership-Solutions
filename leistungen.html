@@ -16,6 +16,13 @@
       integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
       crossorigin="anonymous"
     ></script>
+    <!-- Font Awesome CDN einbinden -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
       body {
         margin: 0;
@@ -26,7 +33,7 @@
       }
 
       header {
-        text-align: center;
+        
         padding: 2rem 1rem;
       }
 
@@ -43,8 +50,9 @@
         margin-top: 0.5rem;
       }
 
+
       .content {
-        max-width: 800px;
+       
         margin: auto;
         line-height: 1.6;
         font-size: 1.1rem;
@@ -52,7 +60,7 @@
 
       .icon-section {
         margin-top: 2rem;
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
 
       .cta {
@@ -64,7 +72,7 @@
         background-color: #be9e44;
         color: #fff;
         border: none;
-        padding: 1rem 2rem;
+        padding: 1rem 1.5rem;
         font-size: 1.1rem;
         border-radius: 8px;
         cursor: pointer;
@@ -73,6 +81,72 @@
 
       .cta button:hover {
         background-color: #a88c3a;
+      }
+
+      footer.social-footer {
+        background-color: #f8f9fa;
+        padding: 20px;
+        text-align: center;
+        font-family: sans-serif;
+      }
+    
+      .social-footer p {
+        margin-bottom: 10px;
+        font-size: 1rem;
+      }
+    
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+      }
+    
+      .social-icons a {
+        text-decoration: none;
+        font-size: 2rem;
+        transition: transform 0.2s ease;
+      }
+    
+      .social-icons a:hover {
+        transform: scale(1.2);
+      }
+    
+      .fa-linkedin {
+        color: #0a66c2;
+      }
+    
+      .fa-instagram {
+        color: #e1306c;
+      }
+    
+      .impressum-link {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 1rem;
+        color: #333;
+        text-decoration:underline;
+      }
+    
+      .impressum-link:hover {
+        text-decoration: underline;
+      }
+
+      header, .content, .cta {
+        text-align: left;
+      }
+
+      h2 {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease, transform 1s ease;
+      }
+
+      h2.fade-in {
+        opacity: 1;
+        transform: translateY(0);
       }
 
       @media (max-width: 600px) {
@@ -88,6 +162,31 @@
           font-size: 1rem;
         }
       }
+      @media (max-width: 480px) {
+            .navbar-logo { width: 140px; height: 40px; }
+            .impressum-link { font-size: 0.85rem; }
+            h3 { padding: 5px; font-size: 1rem; }
+          };
+
+        @media (max-width: 480px) {
+        .social-icons {
+          gap: 15px;
+        }
+        .social-footer p {
+          font-size: 0.95rem;
+        }
+        .social-icons a {
+          font-size: 1.8rem;
+        }
+        .impressum-link {
+          font-size: 0.85rem;
+        }
+      }
+      @media (max-width: 768px) {
+        header, .content, .cta {
+          text-align: center;
+        }}
+
     </style>
   </head>
   <body>
@@ -228,7 +327,38 @@
         <button onclick="window.location.href='bookingform.html'">
           Jetzt Termin buchen
         </button>
+        <br/>
+        <p>Meine weiteren Leistungen findest du auf lebestark.at.</p>
+        <button onclick="window.location.href='https://lebestark.at/leistungen/'">Zu meinen weiteren Leistungen</button>
       </div>
+      <br/>
     </section>
+    <footer class="social-footer">
+      <p>Folge mir auf Social Media:</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/sabine-linhart-409a4997/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+          <span class="sr-only">LinkedIn</span>
+        </a>
+        <a href="https://www.instagram.com/sabine.linhart_lebe.stark/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+          <span class="sr-only">Instagram</span>
+        </a>
+      </div>
+      <a href="https://leadership-solutions.at/impressum.html" class="impressum-link" target="_blank" rel="noopener noreferrer">
+        Impressum
+      </a>
+      <a href="https://leadership-solutions.at/datenschutz.html" class="impressum-link" target="_blank" rel="noopener noreferrer">
+        Datenschutz
+      </a>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const h2 = document.querySelector("h2");
+          setTimeout(() => {
+            h2.classList.add("fade-in");
+          }, 500);
+        });
+      </script>
+  
   </body>
 </html>
