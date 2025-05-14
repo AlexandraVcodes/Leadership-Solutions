@@ -22,6 +22,100 @@
       integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
       crossorigin="anonymous"
     ></script>
+    <style>
+      footer.social-footer {
+        background-color: #f8f9fa;
+        padding: 20px;
+        text-align: center;
+        font-family: sans-serif;
+      }
+    
+      .social-footer p {
+        margin-bottom: 10px;
+        font-size: 1rem;
+      }
+    
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+      }
+    
+      .social-icons a {
+        text-decoration: none;
+        font-size: 2rem;
+        transition: transform 0.2s ease;
+      }
+    
+      .social-icons a:hover {
+        transform: scale(1.2);
+      }
+    
+      .fa-linkedin {
+        color: #0a66c2;
+      }
+    
+      .fa-instagram {
+        color: #e1306c;
+      }
+    
+      .impressum-link {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 1rem;
+        color: #333;
+        text-decoration:underline;
+      }
+    
+      .impressum-link:hover {
+        text-decoration: underline;
+      }
+      h2 { opacity: 0; transition: opacity 2s; }
+          h2.show { opacity: 1; }
+      
+      h3 {
+          padding: 10px;
+        }
+    
+          @media (max-width: 480px) {
+            .navbar-logo { width: 140px; height: 40px; }
+            .impressum-link { font-size: 0.85rem; }
+            h3 { padding: 5px; font-size: 1rem; }
+          };
+
+  
+      /* Screenreader only */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+    
+      @media (max-width: 480px) {
+        .social-icons {
+          gap: 15px;
+        }
+        .social-footer p {
+          font-size: 0.95rem;
+        }
+        .social-icons a {
+          font-size: 1.8rem;
+        }
+        .impressum-link {
+          font-size: 0.85rem;
+        }
+      }
+      
+    </style>
+    
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -100,6 +194,7 @@
       src="images/header_sabine_klein.jpg"
       class="img-fluid rounded header-sabine"
     />
+    <br/>
     <h3 class="kunden-helfen">Wobei kann ich dir helfen?</h3>
     <div class="gedanken">Kommen dir einige dieser Gedanken bekannt vor?</div>
     <ul>
@@ -152,85 +247,7 @@
           <!-- Font Awesome CDN einbinden -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<style>
-  footer.social-footer {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
-    font-family: sans-serif;
-  }
 
-  .social-footer p {
-    margin-bottom: 10px;
-    font-size: 1rem;
-  }
-
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 15px;
-  }
-
-  .social-icons a {
-    text-decoration: none;
-    font-size: 2rem;
-    transition: transform 0.2s ease;
-  }
-
-  .social-icons a:hover {
-    transform: scale(1.2);
-  }
-
-  .fa-linkedin {
-    color: #0a66c2;
-  }
-
-  .fa-instagram {
-    color: #e1306c;
-  }
-
-  .impressum-link {
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #333;
-    text-decoration:underline;
-  }
-
-  .impressum-link:hover {
-    text-decoration: underline;
-  }
-
-  /* Screenreader only */
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-  }
-
-  @media (max-width: 480px) {
-    .social-icons {
-      gap: 15px;
-    }
-    .social-footer p {
-      font-size: 0.95rem;
-    }
-    .social-icons a {
-      font-size: 1.8rem;
-    }
-    .impressum-link {
-      font-size: 0.85rem;
-    }
-  }
-</style>
 
 <footer class="social-footer">
   <p>Folge mir auf Social Media:</p>
@@ -244,10 +261,20 @@
       <span class="sr-only">Instagram</span>
     </a>
   </div>
-  <a href="https://leadership-solutions.at/" class="impressum-link" target="_blank" rel="noopener noreferrer">
-    Impressum & Datenschutz
+  <a href="https://leadership-solutions.at/impressum.html" class="impressum-link" target="_blank" rel="noopener noreferrer">
+    Impressum
   </a>
+  <a href="https://leadership-solutions.at/datenschutz.html" class="impressum-link" target="_blank" rel="noopener noreferrer">
+    Datenschutz
+  </a>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const h2 = document.querySelector('h2');
+      setTimeout(() => { h2.classList.add('show'); }, 500);
+    });
+  </script>
+
 
   </body>
-  </body>
+
 </html>
