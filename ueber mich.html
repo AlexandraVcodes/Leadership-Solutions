@@ -382,26 +382,15 @@
     document.addEventListener('DOMContentLoaded', () => {
       const element = document.querySelector('.leitsatz');
 
-      const fadeIn = () => {
-        element.classList.add('visible');
-      };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
 
-      if (window.innerWidth <= 768) {
-        // Bei kleinen Bildschirmen sofort einblenden
-        fadeIn();
-      } else {
-        // Bei größeren Bildschirmen mit Intersection Observer
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              fadeIn();
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.1 });
-
-        observer.observe(element);
-      }
+      observer.observe(element);
     });
   </script>
 
