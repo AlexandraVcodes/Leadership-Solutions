@@ -47,7 +47,7 @@
       }
 
       .image-container img {
-        width: 212px;
+        width: 208px;
         height: 300px;
         border-radius: 12px;
       }
@@ -173,6 +173,12 @@
         margin-right: 15px;
       }
 
+      .flex-title {
+              display: flex;
+              flex-wrap: wrap;
+              text-align: center;
+              max-width: 80%;}
+
   /* Screenreader only */
   .sr-only {
     position: absolute;
@@ -204,6 +210,12 @@
         h1 { font-size: 1.5rem; }
         h2 { font-size: 1rem; }
         h3 { font-size: 0.875rem; padding: 4px; }
+
+        .flex-title {
+              display: flex;
+              flex-wrap: wrap;
+              text-align: center;
+              max-width: 80%;}
       }
     </style>
   </head>
@@ -255,7 +267,9 @@
           <img src="images/H39A6719-b_leichter.jpg" alt="Das Bild zeigt Sabine Linhart. Eine Frau mit schulterlangen, dunklen Haaren, welche lächelt." />
         </div>
         <div class="contact-form-container">
+          <div class="flex-title">
           <h2>Ich freue mich auf deine Nachricht!</h2>
+        </div>
           <form action="send_email.php" method="post">
             <label>Titel</label>
             <input type="text" name="title" placeholder="Dein Titel" />
