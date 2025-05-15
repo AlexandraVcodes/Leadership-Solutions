@@ -79,6 +79,12 @@
       h3 {
           padding: 10px;
         }
+
+        .flex-title {
+              display: flex;
+              flex-wrap: wrap;
+              max-width: 80%;}
+          
     
           @media (max-width: 480px) {
             .navbar-logo { width: 140px; height: 40px; }
@@ -87,9 +93,14 @@
           };
 
           @media (max-width: 480px) {
-            h1 { font-size: 1.5rem;  display: grid; grid-template-columns: 1fr; max-width: 80%;}
-            h2 { font-size: 1rem; white-space: wrap;}
+            h1 { font-size: 1.5rem;}
+            h2 { font-size: 1rem;}
             h3 { font-size: 0.875rem; padding: 4px; }
+
+            .flex-title {
+              display: flex;
+              flex-wrap: wrap;
+              max-width: 80%;}
           }
       
       
@@ -199,8 +210,12 @@
         </div>
       </div>
     </nav>
+    <div class="flex-title">
     <h1>Herzlich Willkommen bei Leadership Solutions</h1>
+  </div>
+  <div class="flex-title">
     <h2>Erfahrung trifft auf Empathie & Umsetzungskompetenz</h2>
+  </div>
     <img
       src="images/header_sabine_klein.jpg"
       class="img-fluid rounded header-sabine"
