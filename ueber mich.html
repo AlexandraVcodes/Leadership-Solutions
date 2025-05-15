@@ -382,12 +382,11 @@
     document.addEventListener('DOMContentLoaded', () => {
       const element = document.querySelector('.leitsatz');
 
-      const observer = new IntersectionObserver((entries) => {
+      const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-          } else {
-            entry.target.classList.remove('visible');
+            observer.unobserve(entry.target);
           }
         });
       }, { rootMargin: "-50% 0px", threshold: 0.1 });
