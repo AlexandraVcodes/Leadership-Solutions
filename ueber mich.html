@@ -390,7 +390,7 @@
             entry.target.classList.remove('visible');
           }
         });
-      }, { threshold: 0.1 });
+      }, { rootMargin: "-50% 0px", threshold: 0.1 });
 
       observer.observe(element);
     });
