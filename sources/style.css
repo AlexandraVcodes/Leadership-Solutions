@@ -52,6 +52,12 @@ h2 {
   color: #2b324d;
 }
 
+.coach-beraterin {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #2b324d;
+}
+
 .linkedin-icon,
 .ig-icon {
   max-height: 39px;
