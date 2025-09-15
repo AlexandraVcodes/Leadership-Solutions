@@ -483,8 +483,8 @@ footer.social-footer .social-icons {
     max-width: 100%;
   }
 }
-h3.mentorin {
-  color: #0a1633 !important;
-  font-weight: 600 !important;
-  margin-bottom: 1rem !important;
+.under-header {
+  color: #0a1633;
+  font-weight: 800;
+  margin-bottom: 1rem;
 }
