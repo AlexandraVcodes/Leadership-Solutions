@@ -8,7 +8,7 @@
       content="Das ist die Webseite von Leadership Solutions by Sabine Linhart."
     />
     <title>Leadership Solutions by Sabine Linhart</title>
-    <link rel="icon" href="images/Logo_LI_mini.jpg" type="image/icon">
+    <link rel="icon" href="images/Logo_LI_mini.jpg" type="image/icon" />
 
     <link rel="stylesheet" href="sources/style.css" />
     <link
@@ -22,8 +22,15 @@
       integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
       crossorigin="anonymous"
     ></script>
-    <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/32d06ee5725c2.js" data-cmp-host="b.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="0"></script>
-   
+    <script
+      type="text/javascript"
+      data-cmp-ab="1"
+      src="https://cdn.consentmanager.net/delivery/autoblocking/32d06ee5725c2.js"
+      data-cmp-host="b.delivery.consentmanager.net"
+      data-cmp-cdn="cdn.consentmanager.net"
+      data-cmp-codesrc="0"
+    ></script>
+
     <style>
       footer.social-footer {
         background-color: #f8f9fa;
@@ -31,12 +38,12 @@
         text-align: center;
         font-family: sans-serif;
       }
-    
+
       .social-footer p {
         margin-bottom: 10px;
         font-size: 1rem;
       }
-    
+
       .social-icons {
         display: flex;
         justify-content: center;
@@ -45,74 +52,85 @@
         flex-wrap: wrap;
         margin-bottom: 15px;
       }
-    
+
       .social-icons a {
         text-decoration: none;
         font-size: 2rem;
         transition: transform 0.2s ease;
       }
-    
+
       .social-icons a:hover {
         transform: scale(1.2);
       }
-    
+
       .fa-linkedin {
         color: #0a66c2;
       }
-    
+
       .fa-instagram {
         color: #e1306c;
       }
-    
+
       .impressum-link {
         display: inline-block;
         margin-top: 10px;
         font-size: 1rem;
         color: #333;
-        text-decoration:underline;
+        text-decoration: underline;
       }
-    
+
       .impressum-link:hover {
         text-decoration: underline;
       }
-      h2 { opacity: 0; transition: opacity 2s; }
-          h2.show { opacity: 1; }
-      
+      h2 {
+        opacity: 0;
+        transition: opacity 2s;
+      }
+      h2.show {
+        opacity: 1;
+      }
+
       h3 {
-          padding: 10px;
+        padding: 10px;
+      }
+
+      .flex-title {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        max-width: 80%;
+      }
+
+      @media (max-width: 480px) {
+        .navbar-logo {
+          width: 140px;
+          height: 40px;
+        }
+        .impressum-link {
+          font-size: 0.85rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 1.5rem;
+        }
+        h2 {
+          font-size: 1rem;
+        }
+        h3 {
+          font-size: 0.875rem;
+          padding: 4px;
         }
 
         .flex-title {
-              display: flex;
-              flex-wrap: wrap;
-              text-align: center;
-              max-width: 80%;}
-          
-    
-          @media (max-width: 480px) {
-            .navbar-logo { width: 140px; height: 40px; }
-            .impressum-link { font-size: 0.85rem; }
-          
-          };
+          display: flex;
+          flex-wrap: wrap;
+          text-align: center;
+          max-width: 80%;
+        }
+      }
 
-          @media (max-width: 480px) {
-            h1 { font-size: 1.5rem;}
-            h2 { font-size: 1rem;}
-            h3 { font-size: 0.875rem; padding: 4px; }
-
-            .flex-title {
-              display: flex;
-              flex-wrap: wrap;
-              text-align: center;
-              max-width: 80%;}
-          }
-      
-      
-
-    
-    
-
-  
       /* Screenreader only */
       .sr-only {
         position: absolute;
@@ -124,7 +142,7 @@
         clip: rect(0, 0, 0, 0);
         border: 0;
       }
-    
+
       @media (max-width: 480px) {
         .social-icons {
           gap: 15px;
@@ -139,17 +157,17 @@
           font-size: 0.85rem;
         }
       }
-      
+      h3.mentorin {
+        color: #0a1633 !important;
+        font-weight: 600 !important;
+        margin-bottom: 1rem !important;
+      }
     </style>
-    
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a
-          class="navbar-brand"
-          href="https://leadership-solutions.at/"
-        >
+        <a class="navbar-brand" href="https://leadership-solutions.at/">
           <img
             src="images/Logo_Navbar_klein.jpg"
             alt="Logo Leadership Solutions"
@@ -171,8 +189,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item">
-            </li>
+            <li class="nav-item"></li>
             <li class="nav-item">
               <a
                 class="nav-link"
@@ -200,7 +217,6 @@
                 >Leistungen</a
               >
             </li>
-            
             <li class="nav-item">
               <a
                 class="nav-link"
@@ -214,103 +230,256 @@
         </div>
       </div>
     </nav>
-    <div class="flex-title">
-    <h1>Herzlich Willkommen bei Leadership Solutions</h1>
-  </div>
-  <div class="flex-title">
-    <h2>Erfahrung trifft auf Empathie & Umsetzungskompetenz</h2>
-  </div>
-    <img
-      src="images/Header Leadership Solutions Vorschlag Rand F8F9FA.jpg"
-      class="img-fluid rounded header-sabine"
-      alt="Eine Frau mit schulterlangen, dunklen Haaren sitzt vor einem Tisch und lächelt. Das ist Sabine Linhart."
-    />
-    <h3 class="flex-title coach-beraterin">Mentorin, Coach und Beraterin für Führungskräfte:
-        20 Jahre+ Konzernerfahrung, mit ♥️ und Verstand zum Erfolg.</h3>
-    <br/>
-    <h3 class="kunden-helfen">Wobei kann ich dir helfen?</h3>
-    <div class="gedanken">Kommen dir einige dieser Gedanken bekannt vor?</div>
-    <ul>
-      <li>Wie gut arbeiten meine Teammitglieder wirklich zusammen?</li>
-      <li>Gibt es unausgesprochene Konflikte in meinem Team?</li>
-      <li>Sind alle Teammitglieder motiviert und fühlen sich wertgeschätzt?</li>
-      <li>
-        Gebe ich meinen Mitarbeitern genug Orientierung und Unterstützung?
-      </li>
-      <li>
-        Wie kann ich sicherstellen, dass sich alle gehört und eingebunden
-        fühlen?
-      </li>
-      <li>
-        Wie kann ich mehr Eigenverantwortung fördern, ohne die Kontrolle zu
-        verlieren?
-      </li>
-      <li>
-        Wie reagiere ich, wenn Unzufriedenheit oder Unsicherheit im Team
-        aufkommt?
-      </li>
-    </ul>
-    <div class="gedanken">Hierbei kann ich dich unterstützen 🙂</div>
-    <ul>
-      <li>
-        Ich helfe dir als Führungskraft, dich zu behaupten - ohne dass du dich
-        verbiegen musst.
-      </li>
-      <li>
-        Ich zeige dir, wie man Teams führt und motiviert - ohne ständig präsent
-        sein zu müssen.
-      </li>
-      <li>Ich helfe dir, deinen eigenen Führungsstil zu finden.</li>
-      <li>
-        Ich zeige dir, wie Führung mit Strategie aussieht - ohne ständig "Feuer
-        löschen" zu müssen.
-      </li>
-      <li>
-        Ich zeige dir, wie man Wandel und Transformation erfolgreich gestalten
-        kann - damit Change-Prozesse nicht als Bedrohung wahrgenommen werden.
-      </li>
-    </ul>
-    <div class="gedanken">Erfahre mehr über mich und meine Werte</div>
-      <a href="ueber mich.html" class="impressum-link">Hier erfährst du mehr über mich....</a>
-      <br/>
-      <br/>
 
-        <div class="imprint-footer">
+    <main class="content-wrap">
+      <div class="centered">
+        <h1>Herzlich Willkommen bei Leadership Solutions</h1>
+        <h2 class="spacer-sm">
+          Erfahrung trifft auf Empathie &amp; Umsetzungskompetenz
+        </h2>
+      </div>
 
-          <!-- Font Awesome CDN einbinden -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <img
+        src="images/Header Leadership Solutions Vorschlag Rand F8F9FA.jpg"
+        class="img-fluid header-sabine img-center spacer-md"
+        alt="Eine Frau mit schulterlangen, dunklen Haaren sitzt vor einem Tisch und lächelt. Das ist Sabine Linhart."
+      />
 
+      <h3 class="centered spacer-sm mentorin">
+        Mentorin, Coach und Beraterin für Führungskräfte: 20 Jahre+
+        Konzernerfahrung, mit ♥️ und Verstand zum Erfolg.
+      </h3>
 
+      <!-- CTA -->
+      <section id="cta" class="centered spacer-lg">
+        <a
+          href="https://calendly.com/sabine-linhart/30-minuten-call"
+          class="btn btn-primary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Kostenloses Erstgespräch buchen
+        </a>
+      </section>
 
-<footer class="social-footer">
-  <p>Folge mir auf Social Media:</p>
-  <div class="social-icons">
-    <a href="https://www.linkedin.com/in/sabine-linhart-409a4997/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-      <i class="fab fa-linkedin" aria-hidden="true"></i>
-      <span class="sr-only">LinkedIn</span>
-    </a>
-    <a href="https://www.instagram.com/sabine.linhart_lebe.stark/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-      <i class="fab fa-instagram" aria-hidden="true"></i>
-      <span class="sr-only">Instagram</span>
-    </a>
-  </div>
-  <a href="https://leadership-solutions.at/impressum.html" class="impressum-link" target="_blank" rel="noopener noreferrer">
-    Impressum
-  </a>
-  <a href="https://leadership-solutions.at/datenschutz.html" class="impressum-link" target="_blank" rel="noopener noreferrer">
-    Datenschutz
-  </a>
-  <br/>
-  <br/>
-  <a href="https://www.a-class-marketing.at/" class="impressum-link" target="_blank" rel="noopener noreferrer">Webdesign & Programmierung: A-Class Marketing</a>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const h2 = document.querySelector('h2');
-      setTimeout(() => { h2.classList.add('show'); }, 500);
-    });
-  </script>
+      <!-- Leistungen -->
+      <section id="leistungen" class="centered spacer-lg">
+        <h2>Mein Leistungsspektrum</h2>
+        <p class="kunden-helfen-anders">
+          Die Ausgestaltung meiner Leistungen erfolgt stets maßgeschneidert, mit
+          Fokus auf die individuellen Bedürfnisse der Person, die Dynamik des
+          Teams und den größtmöglichen Nutzen für Ihre Organisation.
+        </p>
+        <br />
 
+        <div class="spacer-md">
+          <img
+            src="images/Dreiklang_neu.png"
+            class="img-fluid grafik img-center"
+            alt="Darstellung des Leistungsspektrums: Exzellenz in der Organisation, im Team und des Individuums."
+          />
+        </div>
 
+        <div class="spacer-md">
+          <h3>EXZELLENZ IN DER ORGANISATION</h3>
+          <ul>
+            <li>
+              Beratung und Begleitung bei Transformationsprojekten (z. B.
+              Einführung neuer Systeme oder Prozesse)
+            </li>
+            <li>
+              Prozessoptimierung &amp; Strukturanalyse: Effizienz steigern und
+              klare Verantwortlichkeiten schaffen
+            </li>
+            <li>
+              Strategische Finanzkompetenz: Transparenz in Zahlen, Reporting und
+              Steuerungsinstrumenten
+            </li>
+            <li>
+              Change-Management: Mitarbeiter aktiv mitnehmen, Widerstände lösen,
+              Akzeptanz schaffen
+            </li>
+          </ul>
+
+          <h3>EXZELLENZ IM TEAM</h3>
+          <ul>
+            <li>
+              Coaching und Moderation von Teams in Veränderungs- und
+              Wachstumsprozessen
+            </li>
+            <li>
+              Zusammenarbeit stärken: Kommunikation, Vertrauen und Teamspirit
+              fördern
+            </li>
+            <li>
+              Potenzialanalyse und Teamentwicklung: Talente sichtbar machen und
+              optimal einsetzen
+            </li>
+            <li>
+              Kultur gestalten: neue Rollenbilder und Führungsstrukturen
+              verankern
+            </li>
+          </ul>
+
+          <h3>EXZELLENZ DES INDIVIDUUMS (“LEBE.STARK”)</h3>
+          <ul>
+            <li>Leadership- und Sparrings-Coaching v.a. für Führungskräfte</li>
+            <li>
+              Selbstführung stärken: mentale Klarheit, Resilienz und souveräne
+              Entscheidungsfähigkeit entwickeln
+            </li>
+            <li>
+              Werte, Vision und Ziele schärfen – als Fundament für wirksame und
+              authentische Führung
+            </li>
+            <li>
+              Reflexion &amp; Potenzialarbeit: persönliche Stärken entdecken und
+              gezielt einsetzen
+            </li>
+          </ul>
+          <h3 class="centered spacer-lg kunden-helfen-anders">
+            ✨ Bedürfnisse der Person, die Dynamik des Teams und den
+            größtmöglichen Nutzen für Ihre Organisation stehen dabei stets im
+            Mittelpunkt.✨
+          </h3>
+        </div>
+      </section>
+
+      <h3 class="centered spacer-lg kunden-helfen-anders">
+        Wobei kann ich dir helfen?
+      </h3>
+      <br />
+      <div class="centered gedanken">
+        Kommen dir einige dieser Gedanken bekannt vor?
+      </div>
+      <ul>
+        <li>Wie gut arbeiten meine Teammitglieder wirklich zusammen?</li>
+        <li>Gibt es unausgesprochene Konflikte in meinem Team?</li>
+        <li>
+          Sind alle Teammitglieder motiviert und fühlen sich wertgeschätzt?
+        </li>
+        <li>
+          Gebe ich meinen Mitarbeitern genug Orientierung und Unterstützung?
+        </li>
+        <li>
+          Wie kann ich sicherstellen, dass sich alle gehört und eingebunden
+          fühlen?
+        </li>
+        <li>
+          Wie kann ich mehr Eigenverantwortung fördern, ohne die Kontrolle zu
+          verlieren?
+        </li>
+        <li>
+          Wie reagiere ich, wenn Unzufriedenheit oder Unsicherheit im Team
+          aufkommt?
+        </li>
+      </ul>
+
+      <div class="centered gedanken">Hierbei kann ich dich unterstützen 🙂</div>
+      <ul>
+        <li>
+          Ich helfe dir als Führungskraft, dich zu behaupten – ohne dass du dich
+          verbiegen musst.
+        </li>
+        <li>
+          Ich zeige dir, wie man Teams führt und motiviert – ohne ständig
+          präsent sein zu müssen.
+        </li>
+        <li>Ich helfe dir, deinen eigenen Führungsstil zu finden.</li>
+        <li>
+          Ich zeige dir, wie Führung mit Strategie aussieht – ohne ständig
+          „Feuer löschen“ zu müssen.
+        </li>
+        <li>
+          Ich zeige dir, wie man Wandel und Transformation erfolgreich gestalten
+          kann – damit Change-Prozesse nicht als Bedrohung wahrgenommen werden.
+        </li>
+      </ul>
+
+      <div class="centered gedanken">
+        Erfahre mehr über mich und meine Werte
+      </div>
+      <div class="centered">
+        <a href="ueber mich.html" class="impressum-link"
+          >Hier erfährst du mehr über mich....</a
+        >
+      </div>
+      <br />
+      <br />
+    </main>
+
+    <div class="imprint-footer">
+      <!-- Font Awesome CDN -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+
+      <footer class="social-footer centered">
+        <p>Folge mir auf Social Media:</p>
+        <div class="social-icons">
+          <a
+            href="https://www.linkedin.com/in/sabine-linhart-409a4997/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin" aria-hidden="true"></i>
+            <span class="sr-only">LinkedIn</span>
+          </a>
+          <a
+            href="https://www.instagram.com/sabine.linhart_lebe.stark/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+            <span class="sr-only">Instagram</span>
+          </a>
+        </div>
+        <a
+          href="https://leadership-solutions.at/impressum.html"
+          class="impressum-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Impressum
+        </a>
+        <a
+          href="https://leadership-solutions.at/datenschutz.html"
+          class="impressum-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="margin-left: 12px"
+        >
+          Datenschutz
+        </a>
+        <br />
+        <br />
+        <a
+          href="https://www.a-class-marketing.at/"
+          class="impressum-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Webdesign &amp; Programmierung: A-Class Marketing</a
+        >
+
+        <script>
+          // sanfter Fade-in für die erste Unterzeile
+          document.addEventListener("DOMContentLoaded", function () {
+            const h2 = document.querySelector("h2");
+            if (h2) {
+              h2.style.opacity = 0;
+              h2.style.transition = "opacity 1.2s ease";
+              setTimeout(() => {
+                h2.style.opacity = 1;
+              }, 350);
+            }
+          });
+        </script>
+      </footer>
+    </div>
   </body>
-
 </html>
