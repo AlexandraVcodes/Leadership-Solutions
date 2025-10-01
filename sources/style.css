@@ -488,3 +488,117 @@ footer.social-footer .social-icons {
   font-weight: 800;
   margin-bottom: 1rem;
 }
+<!-- Drei Exzellenz-Blöcke – responsiv & SEO-freundlich -- > :root {
+  --exz-border: #0e2769;
+  --exz-bg: #ffffff;
+  --exz-ink: #0b2056;
+  --exz-radius: 18px;
+}
+
+.exz-section {
+  color: var(--exz-ink);
+  padding: 32px 0;
+}
+
+.exz-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Grid: 1 Spalte mobil, 3 Spalten ab 960px */
+.exz-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 720px) {
+  .exz-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 960px) {
+  .exz-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Karten/Blöcke */
+.exz-card {
+  background: var(--exz-bg);
+  border: 2px solid var(--exz-border);
+  border-radius: var(--exz-radius);
+  padding: 20px;
+  margin-bottom: 28px; /* <-- hinzugefügt, sorgt für Abstand */
+  box-shadow: 0 6px 14px rgba(14, 39, 105, 0.08);
+}
+
+.exz-card h2 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  margin: 0 0 12px;
+  color: var(--exz-border);
+}
+
+.exz-card h3 {
+  font-size: 1.05rem;
+  margin: 18px 0 8px;
+}
+
+.exz-card p {
+  margin: 0 0 10px;
+}
+
+.exz-list {
+  padding-left: 20px;
+  margin: 0 0 10px;
+}
+.exz-list li {
+  margin: 6px 0;
+}
+
+/* Lesbarkeit mobil */
+@media (max-width: 480px) {
+  .exz-card {
+    padding: 16px;
+  }
+  .exz-card h2 {
+    font-size: 1.15rem;
+  }
+}
+
+/* SEO/Barrierefreiheit: Fokusrahmen für Sprunglinks */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+}
+.skip-to-content:focus {
+  left: 12px;
+  top: 12px;
+  background: #fff;
+  padding: 8px 12px;
+  border: 1px solid var(--exz-border);
+  border-radius: 10px;
+}
+
+ul.gedanken-list,
+ul.gedanken-list li {
+  list-style: none !important; /* erzwingt das Entfernen der Bullets */
+  margin: 0;
+  padding: 0;
+}
+
+ul.gedanken-list li {
+  margin: 6px 0; /* optional: etwas Abstand zwischen den Zeilen */
+}
+
+.thoughts-list {
+  list-style: none !important;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.thoughts-list li {
+  margin: 6px 0;
+}
