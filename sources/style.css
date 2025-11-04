@@ -442,6 +442,28 @@ footer.social-footer {
   margin-right: auto;
 }
 
+/* Animation für die Dreiklang-Grafik auf der Startseite*/
+.grafik-dreiklang {
+  opacity: 0;
+  transform: translateX(100px); /* Desktop: von rechts */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.grafik-dreiklang.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Mobile Variante: von unten einschweben */
+@media (max-width: 768px) {
+  .grafik-dreiklang {
+    transform: translateY(100px); /* von unten */
+  }
+  .grafik-dreiklang.visible {
+    transform: translateY(0);
+  }
+}
+
 /* Social Footer leichte Zentrier-Politur */
 footer.social-footer .social-icons {
   justify-content: center;
@@ -596,4 +618,137 @@ ul.gedanken-list li {
 
 .thoughts-list li {
   margin: 6px 0;
+}
+
+/* ===== O-Töne Slider ===== */
+.ot-slider-section {
+  padding: 40px 16px;
+}
+.ot-slider-section .centered h2 {
+  margin-bottom: 18px;
+}
+
+.ot-slider {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.ot-track {
+  display: flex;
+  transition: transform 600ms ease;
+  will-change: transform;
+}
+
+.ot-slide {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 28px 24px 40px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.ot-quote {
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  line-height: 1.2;
+  font-weight: 500;
+  color: #0f172a; /* var(--ink) falls vorhanden */
+  margin: 0;
+  quotes: "„" "“" "‚" "‘";
+}
+.ot-quote:before {
+  content: open-quote;
+  color: #68247a;
+  font-size: 1.6em;
+  line-height: 0;
+  vertical-align: -0.25em;
+  margin-right: 0.1em;
+}
+.ot-quote:after {
+  content: close-quote;
+  color: #68247a;
+  font-size: 1.6em;
+  line-height: 0;
+  vertical-align: -0.25em;
+  margin-left: 0.05em;
+}
+
+.ot-source {
+  margin-top: 12px;
+  color: #64748b; /* var(--muted) */
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+.ot-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #68247a; /* var(--primary-color) */
+  color: #fff;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(104, 36, 122, 0.25);
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+.ot-btn:hover {
+  background: #501b5f;
+  transform: translateY(-50%) scale(1.05);
+}
+.ot-prev {
+  left: 12px;
+}
+.ot-next {
+  right: 12px;
+}
+
+/* Dots */
+.ot-dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 12px;
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.ot-dots button {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  border: 0;
+  background: #e2e8f0;
+  cursor: pointer;
+}
+.ot-dots button[aria-selected="true"] {
+  background: #be9e44;
+}
+
+/* Mobile Feinschliff */
+@media (max-width: 640px) {
+  .ot-btn {
+    display: none;
+  } /* optional: Buttons mobil ausblenden, Swipe reicht */
+  .ot-slide {
+    padding: 24px 18px 44px;
+  }
+}
+
+/* Bewegungen respektieren */
+@media (prefers-reduced-motion: reduce) {
+  .ot-track {
+    transition: none;
+  }
 }

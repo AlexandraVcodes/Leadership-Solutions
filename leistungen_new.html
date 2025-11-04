@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1:1 Coaching</title>
+    <link rel="icon" href="images/Logo_LI_mini.jpg" type="image/icon" />
+     <link rel="stylesheet" href="sources/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome CDN einbinden -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: white;
+        color: #2b324d;
+        padding: 20px;
+      }
+
+      header {
+        
+        padding: 2rem 1rem;
+      }
+
+      h1 {
+        color: #2b324d;
+        font-size: 2.2rem;
+        font-weight: 700;
+      }
+
+      h2 {
+        color: #be9e44;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: 0.5rem;
+      }
+
+
+      .content {
+       
+        margin: auto;
+        line-height: 1.6;
+        font-size: 1rem;
+      }
+
+      .icon-section {
+        margin-top: 2rem;
+        font-size: 1rem;
+      }
+
+      .cta {
+        text-align: center;
+        margin-top: 3rem;
+      }
+
+      .cta button {
+        background-color: #be9e44;
+        color: white;
+        border: none;
+        padding: 1rem 1.2rem;
+        font-size: 1.1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .cta button:hover {
+        background-color: #a88c3a;
+      }
+
+      footer.social-footer {
+        background-color: #f8f9fa;
+        padding: 20px;
+        text-align: center;
+        font-family: sans-serif;
+      }
+    
+      .social-footer p {
+        margin-bottom: 10px;
+        font-size: 1rem;
+      }
+    
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+      }
+    
+      .social-icons a {
+        text-decoration: none;
+        font-size: 2rem;
+        transition: transform 0.2s ease;
+      }
+    
+      .social-icons a:hover {
+        transform: scale(1.2);
+      }
+    
+      .fa-linkedin {
+        color: #0a66c2;
+      }
+    
+      .fa-instagram {
+        color: #e1306c;
+      }
+    
+      .impressum-link {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 1rem;
+        color: #333;
+        text-decoration:underline;
+      }
+    
+      .impressum-link:hover {
+        text-decoration: underline;
+      }
+
+      header, .content, .cta {
+        text-align: left;
+      }
+
+      h2 {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease, transform 1s ease;
+      }
+
+      h2.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 1.6rem;
+        }
+
+        h2 {
+          font-size: 1.2rem;
+        }
+
+        .content {
+          font-size: 1rem;
+        }
+      }
+      @media (max-width: 480px) {
+            .navbar-logo { width: 140px; height: 40px; }
+            .impressum-link { font-size: 0.85rem; }
+            h3 { padding: 5px; font-size: 1rem; }
+          };
+
+        @media (max-width: 480px) {
+        .social-icons {
+          gap: 15px;
+        }
+        .social-footer p {
+          font-size: 0.95rem;
+        }
+        .social-icons a {
+          font-size: 1.8rem;
+        }
+        .impressum-link {
+          font-size: 0.85rem;
+        }
+      }
+      @media (max-width: 768px) {
+        header, .content, .cta {
+          text-align: center;
+        }}
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a
+          class="navbar-brand"
+          href="https://www.https://www.naturalbeauty-baden.at/"
+        >
+          <img
+            src="images/Logo_Navbar_klein.jpg"
+            alt="Logo Leadership Solutions"
+            class="navbar-logo"
+            width="180"
+            height="50"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="https://leadership-solutions.at/"
+                target="_blank"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="index.html"
+                target="_blank"
+                >Willkommen</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="ueber mich.html"
+                target="_blank"
+                >Über mich</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="leistungen.html"
+                target="_blank"
+                >Leistungen</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="kontakt.html"
+                target="_blank"
+                >Kontakt</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <h1>1:1 Coaching für leise, starke Führung.</h1>
+      <h2>Dein Weg. Deine Klarheit. Deine Wirkung.</h2>
+    </header>
+
+    <section class="content">
+      <p>
+        Nicht jede Führung braucht Lautstärke, um gehört zu werden. Ich glaube
+        an die Kraft der leisen Töne – an Führung, die durch Präsenz, Tiefe und
+        Klarheit wirkt. Wenn du jemand bist, der nicht im Rampenlicht stehen
+        muss, um Großes zu bewegen, dann bist du hier genau richtig.
+      </p>
+
+      <p>
+        In meinem 1:1 Coaching begleite ich dich dabei, deinen ganz eigenen
+        Führungsstil zu entfalten – einen, der nicht auf laute Gesten, sondern
+        auf Substanz, Empathie und strategisches Denken setzt. Ich weiß, wie
+        herausfordernd es sein kann, sich in einer Welt voller extrovertierter
+        Ideale seinen Platz zu nehmen. Und ich weiß auch: Es geht – auf deine
+        Art.
+      </p>
+
+      <p>
+        In unseren Sitzungen arbeiten wir an dem, was dir wirklich wichtig ist:
+        an Klarheit in deiner Rolle, an selbstbewusster Präsenz, an Strukturen,
+        die dich tragen, und an Entscheidungen, die zu dir passen. Du musst dich
+        nicht verbiegen, um zu führen. Du darfst du selbst sein – mit Wirkung.
+      </p>
+
+      <div class="icon-section">
+        <p>
+          💡 Du buchst deine Coachings ganz einfach über mein eigenes
+          Online-Tool – flexibel, unkompliziert, nach deinem Zeitplan.
+        </p>
+        <p>🤍 Für Frauen, die ihren Weg leise, aber bestimmt gehen.</p>
+        <p>
+          🤍 Für Führungspersönlichkeiten, die Tiefe vor Lautstärke stellen.
+        </p>
+        <p>
+          🤍 Für Menschen, die mit Herz, Klarheit und Haltung führen wollen.
+        </p>
+      </div>
+
+      <div class="cta">
+        <p>📅 Buche jetzt dein persönliches Coaching</p>
+        <p>
+          Finde deinen eigenen Raum für Wachstum, Reflexion und nachhaltige
+          Veränderung.
+        </p>
+        <button onclick="window.location.href='bookingform.html'">
+          Jetzt Termin buchen
+        </button>
+        <br/>
+        <p>Meine weiteren Leistungen findest du auf lebestark.at.</p>
+        <button onclick="window.location.href='https://lebestark.at/leistungen/'">Zu meinen weiteren Leistungen</button>
+      </div>
+      <br/>
+    </section>
+    <footer class="social-footer">
+      <p>Folge mir auf Social Media:</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/sabine-linhart-409a4997/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+          <span class="sr-only">LinkedIn</span>
+        </a>
+        <a href="https://www.instagram.com/sabine.linhart_lebe.stark/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+          <span class="sr-only">Instagram</span>
+        </a>
+      </div>
+      <a href="https://leadership-solutions.at/impressum.html" class="impressum-link" target="_blank" rel="noopener noreferrer">
+        Impressum
+      </a>
+      <a href="https://leadership-solutions.at/datenschutz.html" class="impressum-link" target="_blank" rel="noopener noreferrer">
+        Datenschutz
+      </a>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const h2 = document.querySelector("h2");
+          setTimeout(() => {
+            h2.classList.add("fade-in");
+          }, 500);
+        });
+      </script>
+  
+  </body>
+</html>
