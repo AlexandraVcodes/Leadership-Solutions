@@ -505,6 +505,7 @@ footer.social-footer .social-icons {
   font-weight: 800;
   margin-bottom: 1rem;
 }
+
 <!-- Drei Exzellenz-Blöcke – responsiv & SEO-freundlich -- > :root {
   --exz-border: #0e2769;
   --exz-bg: #ffffff;
@@ -751,4 +752,18 @@ ul.gedanken-list li {
   .ot-track {
     transition: none;
   }
+}
+
+.leistungen-header {
+  color: #0a1633 !important;
+  font-weight: 700 !important;
+  font-size: 18px;
+  margin-bottom: 1rem !important;
+}
+
+.grafik-dreiklang-leistungen {
+  width: 60%; /* Bild wird 30 % kleiner dargestellt */
+  height: auto; /* Seitenverhältnis bleibt erhalten */
+  display: block;
+  margin: 0 auto; /* zentriert es */
 }
