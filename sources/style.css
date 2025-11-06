@@ -767,3 +767,23 @@ ul.gedanken-list li {
   display: block;
   margin: 0 auto; /* zentriert es */
 }
+
+.legal-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.impressum-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.impressum-link:hover {
+  color: #501b5f;
+  text-decoration: underline;
+}
