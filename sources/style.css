@@ -664,7 +664,7 @@ ul.gedanken-list li {
 }
 .ot-quote:before {
   content: open-quote;
-  color: #68247a;
+  color: #0e2769;
   font-size: 1.6em;
   line-height: 0;
   vertical-align: -0.25em;
@@ -672,7 +672,7 @@ ul.gedanken-list li {
 }
 .ot-quote:after {
   content: close-quote;
-  color: #68247a;
+  color: #0e2769;
   font-size: 1.6em;
   line-height: 0;
   vertical-align: -0.25em;
