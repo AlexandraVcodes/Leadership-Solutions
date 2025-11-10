@@ -690,11 +690,11 @@ ul.gedanken-list li {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #68247a; /* var(--primary-color) */
+  background: #0e2769; /* var(--primary-color) */
   color: #fff;
   border: none;
-  width: 30px;
-  height: 30px;
+  width: 27px;
+  height: 27px;
   border-radius: 999px;
   display: grid;
   place-items: center;
