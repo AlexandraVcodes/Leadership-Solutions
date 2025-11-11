@@ -703,7 +703,7 @@ ul.gedanken-list li {
   transition: transform 0.15s ease, background 0.2s ease;
 }
 .ot-btn:hover {
-  background: #501b5f;
+  background: #b3975a;
   transform: translateY(-50%) scale(1.05);
 }
 .ot-prev {
@@ -786,4 +786,21 @@ ul.gedanken-list li {
 .impressum-link:hover {
   color: #501b5f;
   text-decoration: underline;
+}
+
+/* Über mich: Werdegang und Qualifikationen */
+
+#werdegang {
+  text-align: center;
+  margin: 40px auto;
+}
+
+#werdegang h3 {
+  color: var(--primary-color);
+  margin-bottom: 16px;
+}
+
+#werdegang .qualifikation {
+  font-size: 16px;
+  margin: 6px 0;
 }
