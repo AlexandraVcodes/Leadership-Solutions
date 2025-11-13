@@ -1,0 +1,669 @@
+.lavishly-yours-regular {
+  font-family: "Lavishly Yours", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.the-nautigal-regular {
+  font-family: "The Nautigal", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.the-nautigal-bold {
+  font-family: "The Nautigal", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* NEU: Body-Layout etwas neutraler, ohne globales text-align:center */
+body {
+  margin: 0;
+  padding: 10px;
+  color: #2b324d !important;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+/* NEU: Typografie – keine fixe Breite, bessere Max-Breite & Abstände */
+h1,
+h2 {
+  color: #2b324d;
+  font-weight: 700;
+  max-width: 980px;
+  margin: 0 auto 0.75rem;
+  padding: 10px 0;
+}
+
+/* NEU: Farben differenziert */
+h2 {
+  color: #be9e44;
+  font-weight: 600;
+}
+
+h3 {
+  color: #2b324d;
+}
+
+/* NEU: Grund-Absätze */
+p {
+  max-width: 980px;
+  margin: 0.25rem auto 0.75rem;
+  line-height: 1.6;
+}
+
+/* NEU: Standard-Listen */
+ul {
+  max-width: 820px;
+  margin: 0 auto 1rem;
+  padding-left: 1.1rem;
+  line-height: 1.55;
+}
+
+li {
+  margin: 0 0 0.5rem 0;
+}
+
+/* Zentrische Ausrichtung nur bei Bedarf per Klasse */
+.centered {
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gedanken {
+  font-weight: 700;
+  font-size: 20px;
+  padding: 5px;
+  color: #be9e44;
+}
+
+.kunden-helfen {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #2b324d;
+}
+
+.kunden-helfen-anders {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #2b324d !important;
+  font-weight: 700;
+}
+
+.coach-beraterin {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #2b324d;
+}
+
+.linkedin-icon,
+.ig-icon {
+  max-height: 39px;
+  max-width: 39px;
+  padding: 4px;
+}
+
+.social-media-icons {
+  width: 20%;
+  margin-left: 43%;
+  margin-right: 30%;
+  margin-top: 10px;
+}
+
+.leitsatz {
+  font-weight: 400;
+  font-size: 25px;
+  color: #be9e44;
+  max-width: 980px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* NEU: Sichtbar-Zustand für Scroll-Animation */
+.leitsatz.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CTA-Button */
+.btn-primary {
+  background-color: #0e2769 !important;
+  border-color: #0e2769 !important;
+  color: #b3975a !important;
+  font-size: 1.2rem;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 700;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #081846 !important;
+  border-color: #081846 !important;
+  color: #d4b878 !important;
+  transform: translateY(-3px);
+}
+
+/* Leistungen (wird auch auf anderen Seiten genutzt) */
+#leistungen h2 {
+  color: #0a1633;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+#leistungen h3 {
+  color: #b3975a;
+  font-weight: 700;
+  margin-top: 2rem;
+  text-transform: uppercase;
+}
+
+#leistungen img {
+  max-width: 600px;
+  border-radius: 16px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  display: block;
+}
+
+#leistungen ul {
+  list-style-type: disc !important;
+  list-style-position: outside;
+  padding-left: 1.1rem;
+  margin: 0 auto 1rem;
+  max-width: 820px;
+  text-align: left;
+}
+
+#leistungen ul li {
+  position: static !important;
+  padding-left: 0 !important;
+  margin: 0 0 10px;
+  color: #444;
+}
+
+/* Entfernt pseudo-Icons endgültig */
+#leistungen ul li::before {
+  content: none !important;
+}
+
+/* Social Footer */
+footer.social-footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 2rem;
+  transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.fa-linkedin {
+  color: #0a66c2;
+}
+
+.fa-instagram {
+  color: #e1306c;
+}
+
+.impressum-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
+  text-decoration: underline;
+}
+
+/* Grundlayout: Inhalte mittig & besser lesbar */
+.content-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Abstände */
+.spacer-sm {
+  margin-top: 12px;
+}
+.spacer-md {
+  margin-top: 24px;
+}
+.spacer-lg {
+  margin-top: 40px;
+}
+
+/* Bilder mittig & responsiv */
+.img-center {
+  display: block;
+  margin: 0 auto;
+}
+
+.header-sabine {
+  max-width: 980px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* CTA-Button – exakt deine Farben */
+#cta .btn.btn-primary,
+#cta-bottom .btn.btn-primary {
+  /* NEU: auch zweiter CTA-Block angesprochen */
+  background-color: #0e2769 !important;
+  border-color: #0e2769 !important;
+  color: #b3975a !important;
+  font-size: 1.125rem;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+#cta .btn.btn-primary:hover,
+#cta-bottom .btn.btn-primary:hover {
+  background-color: #0b2056 !important;
+  border-color: #0b2056 !important;
+  color: #d9c18a !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.14);
+}
+
+/* Navbar: Menü mittig auf größeren Screens */
+.navbar-nav {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Social Footer leichte Zentrier-Politur */
+footer.social-footer .social-icons {
+  justify-content: center;
+}
+
+/* Über-Header-Text */
+.under-header {
+  color: #0a1633;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+/* NEU: Werte-Grid – responsiv */
+.werte-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 980px;
+  margin: 20px auto 0;
+}
+
+.wert {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  text-align: left;
+}
+
+.wert h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #0a1633;
+}
+
+.wert p {
+  margin: 0;
+}
+
+/* NEU: Werdegang-Spalten – zwei Spalten ab Tablet */
+#werdegang {
+  text-align: center;
+  margin: 40px auto;
+}
+
+#werdegang h3 {
+  color: #0e2769;
+  margin-bottom: 16px;
+}
+
+#werdegang .qualifikation {
+  font-size: 16px;
+  margin: 6px 0;
+}
+
+.werdegang-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.werdegang-block {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 16px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* NEU: Legal-Links als Flex */
+.legal-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.legal-links .impressum-link {
+  color: #0e2769;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.legal-links .impressum-link:hover {
+  color: #501b5f;
+  text-decoration: underline;
+}
+
+/* NEU: Skip-Link für Barrierefreiheit */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  z-index: 1000;
+}
+
+.skip-to-content:focus {
+  left: 12px;
+  top: 12px;
+  background: #fff;
+  padding: 8px 12px;
+  border: 1px solid #0e2769;
+  border-radius: 10px;
+}
+
+/* NEU: CSS-Kommentar korrekt, plus Primary-Color-Variable */
+/* Drei Exzellenz-Blöcke – responsiv & SEO-freundlich */
+:root {
+  --primary-color: #0e2769; /* NEU: wird für mehrere Elemente genutzt */
+  --exz-border: #0e2769;
+  --exz-bg: #ffffff;
+  --exz-ink: #0b2056;
+  --exz-radius: 18px;
+}
+
+/* Exzellenz-Sektion (verwendet auf anderen Seiten) */
+.exz-section {
+  color: var(--exz-ink);
+  padding: 32px 0;
+}
+
+.exz-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Grid: 1 Spalte mobil, 3 Spalten ab 960px */
+.exz-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .exz-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .exz-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Karten/Blöcke */
+.exz-card {
+  background: var(--exz-bg);
+  border: 2px solid var(--exz-border);
+  border-radius: var(--exz-radius);
+  padding: 20px;
+  margin-bottom: 28px;
+  box-shadow: 0 6px 14px rgba(14, 39, 105, 0.08);
+}
+
+.exz-card h2 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  margin: 0 0 12px;
+  color: var(--exz-border);
+}
+
+.exz-card h3 {
+  font-size: 1.05rem;
+  margin: 18px 0 8px;
+}
+
+.exz-card p {
+  margin: 0 0 10px;
+}
+
+.exz-list {
+  padding-left: 20px;
+  margin: 0 0 10px;
+}
+
+.exz-list li {
+  margin: 6px 0;
+}
+
+/* Lesbarkeit mobil */
+@media (max-width: 480px) {
+  .exz-card {
+    padding: 16px;
+  }
+  .exz-card h2 {
+    font-size: 1.15rem;
+  }
+}
+
+/* O-Töne Slider (unverändert außer Kleinigkeiten) */
+.ot-slider-section {
+  padding: 40px 16px;
+}
+
+.ot-slider-section .centered h2 {
+  margin-bottom: 18px;
+}
+
+.ot-slider {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.ot-track {
+  display: flex;
+  transition: transform 600ms ease;
+  will-change: transform;
+}
+
+.ot-slide {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 28px 24px 40px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.ot-quote {
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  line-height: 1.2;
+  font-weight: 500;
+  color: #0f172a;
+  margin: 0;
+  quotes: "„" "“" "‚" "‘";
+}
+
+.ot-quote:before {
+  content: open-quote;
+  color: #0e2769;
+  font-size: 1.6em;
+  line-height: 0;
+  vertical-align: -0.25em;
+  margin-right: 0.1em;
+}
+
+.ot-quote:after {
+  content: close-quote;
+  color: #0e2769;
+  font-size: 1.6em;
+  line-height: 0;
+  vertical-align: -0.25em;
+  margin-left: 0.05em;
+}
+
+.ot-source {
+  margin-top: 12px;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+.ot-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0e2769;
+  color: #fff;
+  border: none;
+  width: 27px;
+  height: 27px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(104, 36, 122, 0.25);
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.ot-btn:hover {
+  background: #b3975a;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.ot-prev {
+  left: 12px;
+}
+
+.ot-next {
+  right: 12px;
+}
+
+/* Dots */
+.ot-dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 12px;
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ot-dots button {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  border: 0;
+  background: #e2e8f0;
+  cursor: pointer;
+}
+
+.ot-dots button[aria-selected="true"] {
+  background: #be9e44;
+}
+
+/* Mobile Feinschliff */
+@media (max-width: 640px) {
+  .ot-btn {
+    display: none;
+  }
+  .ot-slide {
+    padding: 24px 18px 44px;
+  }
+}
+
+/* Bewegungen respektieren */
+@media (prefers-reduced-motion: reduce) {
+  .ot-track {
+    transition: none;
+  }
+}
+
+/* Responsive Überschriften & Textgrößen */
+@media (max-width: 992px) {
+  .content-wrap h1 {
+    font-size: 1.7rem;
+  }
+  .content-wrap h2 {
+    font-size: 1.25rem;
+  }
+  .content-wrap h3 {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .werte-grid {
+    grid-template-columns: 1fr;
+  }
+  .werdegang-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .content-wrap {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  p,
+  li {
+    font-size: 0.95rem;
+  }
+}
