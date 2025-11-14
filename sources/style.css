@@ -17,8 +17,10 @@
 }
 
 body {
+  margin: 0;
   padding: 10px;
   color: #2b324d !important;
+  font-family: Arial, sans-serif;
 }
 
 h1 {
@@ -33,11 +35,6 @@ h2 {
   font-weight: 600;
   width: 900px;
   padding: 10px;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  text-align: center; /* Texte mittiger */
 }
 
 h1,
@@ -506,7 +503,9 @@ footer.social-footer .social-icons {
   margin-bottom: 1rem;
 }
 
-<!-- Drei Exzellenz-Blöcke – responsiv & SEO-freundlich -- > :root {
+/* Drei Exzellenz-Blöcke – responsiv & SEO-freundlich */
+:root {
+  --primary-color: #0e2769;
   --exz-border: #0e2769;
   --exz-bg: #ffffff;
   --exz-ink: #0b2056;
@@ -524,21 +523,13 @@ footer.social-footer .social-icons {
   padding: 0 16px;
 }
 
-/* Grid: 1 Spalte mobil, 3 Spalten ab 960px */
+/* Exzellenz-Blöcke immer untereinander – auch Desktop */
 .exz-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr;
+  display: block;
 }
-@media (min-width: 720px) {
-  .exz-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 960px) {
-  .exz-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+
+.exz-card {
+  margin-bottom: 32px;
 }
 
 /* Karten/Blöcke */
@@ -582,6 +573,76 @@ footer.social-footer .social-icons {
   }
   .exz-card h2 {
     font-size: 1.15rem;
+  }
+}
+
+/* Überschreibt globale fixe Breiten für H2 nur in den Exzellenz-Kacheln */
+.exz-card h2 {
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 0 12px 0 !important;
+  box-sizing: border-box;
+  text-align: left; /* ODER center – dein Stil */
+}
+
+/* Mobile: etwas mehr Luft */
+@media (max-width: 768px) {
+  .exz-card h2 {
+    font-size: 1.25rem;
+    text-align: center; /* falls du es lieber mittig willst */
+  }
+}
+
+/* Beispiele-Bereich in den Exzellenz-Karten */
+.examples {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column; /* Text & Button untereinander */
+}
+
+/* erstes Beispiel */
+.example-primary {
+  margin-bottom: 12px;
+}
+
+/* versteckte Zusatzbeispiele */
+.examples-extra {
+  margin-top: 12px;
+}
+
+/* Button "Weitere Beispiele" – Basis-Stil */
+.examples-toggle {
+  align-self: flex-end; /* Standard: rechts (Mobile-First) */
+  margin-top: 12px;
+  padding: 8px 18px;
+  font-size: 0.95rem;
+  border-radius: 999px;
+
+  color: #b3975a !important;
+  border: 2px solid #b3975a !important;
+  background-color: #ffffff !important;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Hover-Effekt */
+.examples-toggle:hover {
+  background-color: #f7f4ee !important;
+  transform: translateY(-2px);
+}
+
+/* Desktop: Button zentriert unter dem Text */
+@media (min-width: 992px) {
+  .examples-toggle {
+    align-self: center; /* nur der Button – nicht der ganze Inhalt */
+  }
+}
+
+/* Desktop: Button zentriert */
+@media (min-width: 992px) {
+  .examples {
+    align-items: center; /* Button zentriert */
   }
 }
 
@@ -803,4 +864,33 @@ ul.gedanken-list li {
 #werdegang .qualifikation {
   font-size: 16px;
   margin: 6px 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.grafik-dreiklang {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.grafik-dreiklang.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+  .grafik-dreiklang {
+    transform: translateY(100px);
+  }
+  .grafik-dreiklang.visible {
+    transform: translateY(0);
+  }
 }
