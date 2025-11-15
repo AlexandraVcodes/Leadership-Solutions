@@ -26,15 +26,11 @@ body {
 h1 {
   color: #2b324d;
   font-weight: 700;
-  width: 900px;
-  padding: 10px;
 }
 
 h2 {
   color: #be9e44;
   font-weight: 600;
-  width: 900px;
-  padding: 10px;
 }
 
 h1,
@@ -50,6 +46,17 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Globale Korrektur: h1 & h2 immer zentriert und responsive */
+h1,
+h2 {
+  width: 100% !important; /* statt fixer 900px */
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 auto 16px auto !important; /* zentriert */
+  text-align: center !important;
+  box-sizing: border-box; /* wichtig für Layout */
 }
 
 .gedanken {
@@ -269,10 +276,10 @@ footer.social-footer {
 /* Mobile Optimierung */
 @media (max-width: 768px) {
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
   }
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
   }
   h3 {
     font-size: 1rem;
