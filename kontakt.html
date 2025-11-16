@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +8,7 @@
       content="Kontaktformular für Leadership Solutions by Sabine Linhart"
     />
     <title>Kontaktformular</title>
-    <link rel="icon" href="images/Ls _ Logo icon neu.png" type="image/icon">
+    <link rel="icon" href="images/Ls _ Logo icon neu.png" type="image/icon" />
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
@@ -21,201 +21,222 @@
       integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="sources/style.css" />
     <style>
+      /* Seite leicht einrahmen */
       body {
-        font-family: Arial, sans-serif;
-        background-color: white;
-        padding: 15px;
-      }
-      .container {
-        max-width: 800px;
-        background: #fff;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      }
-      .row {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
-      }
-      .image-container {
-        flex: 1;
-        max-width: 350px;
+        background-color: #ffffff;
       }
 
-      .image-container img {
-        width: 208px;
-        height: 300px;
-        border-radius: 12px;
+      /* Wrapper nur für den Kontaktbereich, überschreibt nicht globale .container-Styles auf anderen Seiten */
+      .contact-wrapper {
+        max-width: 920px;
+        margin: 24px auto;
+        background: #ffffff;
+        padding: 24px 20px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
       }
-      .contact-form-container {
-        flex: 2;
-        max-width: 450px;
-        padding-left: 20px;
+
+      /* Eigene Row, damit Bootstrap .row nicht überschrieben wird */
+      .contact-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        align-items: flex-start;
       }
-      h2 {
-        margin-bottom: 15px;
-        font-size: 24px;
+
+      .contact-image-col {
+        flex: 1 1 260px;
+        max-width: 320px;
+        display: flex;
+        justify-content: center;
       }
-      label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-      }
-      .required {
-        color: red;
-      }
-      input,
-      textarea {
+
+      .contact-image {
         width: 100%;
-        padding: 12px;
-        margin-bottom: 15px;
+        max-width: 260px;
+        height: auto;
+        border-radius: 12px;
+        object-fit: cover;
+      }
+
+      .contact-form-col {
+        flex: 1 1 320px;
+        min-width: 0;
+      }
+
+      .contact-title {
+        margin-bottom: 16px;
+        text-align: center;
+      }
+
+      .contact-title h2 {
+        margin-bottom: 0;
+      }
+
+      .contact-form label {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: 600;
+        text-align: left;
+      }
+
+      .required {
+        color: #e63946;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px 12px;
+        margin-bottom: 14px;
         border: 1px solid #ddd;
         border-radius: 8px;
-        font-size: 16px;
+        font-size: 1rem;
       }
-      .btn {
+
+      .contact-form button {
         background-color: #be9e44;
         color: #2b324d;
         border: none;
-        padding: 8px 15px;
-        border-radius: 8px;
+        padding: 10px 22px;
+        border-radius: 999px;
+        font-weight: 600;
         cursor: pointer;
-        transition: background 0.3s;
-      }
-      button:hover {
-        background-color: #a8853c;
+        transition: background 0.3s ease, transform 0.15s ease;
       }
 
-      .contact-details {
-        text-align: center;
-        margin-top: 15px;
+      .contact-form button:hover {
+        background-color: #a8853c;
+        transform: translateY(-1px);
       }
-      .contact-details strong,
-      .contact-details a {
+
+      .contact-meta {
+        text-align: center;
+        margin-top: 16px;
+        font-size: 0.95rem;
+      }
+
+      .contact-meta strong,
+      .contact-meta a {
         color: #be9e44;
         text-decoration: none;
       }
 
+      .contact-meta a:hover {
+        text-decoration: underline;
+      }
+
+      /* Navbar leicht kompakter auf dieser Seite */
+      .navbar-nav .nav-item {
+        margin-right: 12px;
+      }
+
+      /* Footer-Anpassung – kannst du auch weglassen, wenn es schon in style.css steht */
+      footer.social-footer {
+        background-color: #f8f9fa;
+        padding: 20px;
+        text-align: center;
+        font-family: sans-serif;
+      }
+
+      .social-footer p {
+        margin-bottom: 10px;
+        font-size: 1rem;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+      }
+
+      .social-icons a {
+        text-decoration: none;
+        font-size: 2rem;
+        transition: transform 0.2s ease;
+      }
+
+      .social-icons a:hover {
+        transform: scale(1.2);
+      }
+
+      .fa-linkedin {
+        color: #0a66c2;
+      }
+
+      .fa-instagram {
+        color: #e1306c;
+      }
+
+      .impressum-link {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 1rem;
+        color: #333;
+        text-decoration: underline;
+      }
+
+      .impressum-link:hover {
+        text-decoration: underline;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+
+      /* Mobile-Optimierung */
       @media (max-width: 768px) {
-        .row {
+        .contact-wrapper {
+          margin: 16px auto;
+          padding: 20px 16px;
+          box-shadow: none; /* sauberer, "luftiger" Look auf Handy */
+        }
+
+        .contact-row {
           flex-direction: column;
           align-items: center;
         }
-        .contact-form-container {
-          padding-left: 0;
-          max-width: 100%;
+
+        .contact-form-col {
+          width: 100%;
         }
-        .image-container {
-          max-width: 100%;
-          margin-bottom: 15px;
+
+        .contact-title h2 {
+          font-size: 1.3rem;
         }
-        
-      }
-      footer.social-footer {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
-    font-family: sans-serif;
-  }
-
-  .social-footer p {
-    margin-bottom: 10px;
-    font-size: 1rem;
-  }
-
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 15px;
-  }
-
-  .social-icons a {
-    text-decoration: none;
-    font-size: 2rem;
-    transition: transform 0.2s ease;
-  }
-
-  .social-icons a:hover {
-    transform: scale(1.2);
-  }
-
-  .fa-linkedin {
-    color: #0a66c2;
-  }
-
-  .fa-instagram {
-    color: #e1306c;
-  }
-
-  .impressum-link {
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #333;
-    text-decoration:underline;
-  }
-
-  .impressum-link:hover {
-    text-decoration: underline;
-  }
-
-  .navbar-nav {
-        margin-left: 0 !important;
-      }
-      .navbar-nav .nav-item {
-        margin-right: 15px;
       }
 
-      .flex-title {
-              display: flex;
-              flex-wrap: wrap;
-              text-align: center;
-              max-width: 80%;}
-
-  /* Screenreader only */
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-  }
-
-  @media (max-width: 480px) {
-    .social-icons {
-      gap: 15px;
-    }
-    .social-footer p {
-      font-size: 0.95rem;
-    }
-    .social-icons a {
-      font-size: 1.8rem;
-    }
-    .impressum-link {
-      font-size: 0.85rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-        h1 { font-size: 1.5rem; }
-        h2 { font-size: 1rem; }
-        h3 { font-size: 0.875rem; padding: 4px; }
-
-        .flex-title {
-              display: flex;
-              flex-wrap: wrap;
-              text-align: center;
-              max-width: 80%;}
+      @media (max-width: 480px) {
+        .social-icons {
+          gap: 15px;
+        }
+        .social-footer p {
+          font-size: 0.95rem;
+        }
+        .social-icons a {
+          font-size: 1.8rem;
+        }
+        .impressum-link {
+          font-size: 0.85rem;
+        }
       }
     </style>
   </head>
@@ -254,68 +275,98 @@
               <a class="nav-link" href="leistungen.html">Leistungen</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="kontakt.html">Kontakt</a>
+              <a class="nav-link active" aria-current="page" href="kontakt.html"
+                >Kontakt</a
+              >
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class="container mt-4">
-      <div class="row">
-        <div class="image-container">
-          <img src="images/H39A6211-b leichter_Oktober 2025.jpg" alt="Das Bild zeigt Sabine Linhart. Eine Frau mit schulterlangen, dunklen Haaren, welche lächelt." />
+    <!-- Kontaktbereich -->
+    <div class="contact-wrapper">
+      <div class="contact-row">
+        <div class="contact-image-col">
+          <img
+            src="images/H39A6211-b leichter_Oktober 2025.jpg"
+            class="contact-image"
+            alt="Das Bild zeigt Sabine Linhart. Eine Frau mit schulterlangen, dunklen Haaren, welche lächelt."
+          />
         </div>
-        <div class="contact-form-container">
-          <div class="flex-title">
-          <h2>Ich freue mich auf deine Nachricht!</h2>
-        </div>
-          <form action="send_email.php" method="post">
-            <label>Titel</label>
-            <input type="text" name="title" placeholder="Dein Titel" />
 
-            <label>Name <span class="required">*</span></label>
-            <input type="text" name="name" placeholder="Dein Name" required />
+        <div class="contact-form-col">
+          <div class="contact-title">
+            <h2>Ich freue mich auf deine Nachricht!</h2>
+          </div>
 
-            <label>E-Mail <span class="required">*</span></label>
+          <form action="send_email.php" method="post" class="contact-form">
+            <label for="title">Titel</label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Dein Titel"
+            />
+
+            <label for="name">Name <span class="required">*</span></label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Dein Name"
+              required
+            />
+
+            <label for="email">E-Mail <span class="required">*</span></label>
             <input
               type="email"
+              id="email"
               name="email"
               placeholder="Deine E-Mail-Adresse"
               required
             />
 
-            <label>Telefonnummer <span class="required">*</span></label>
+            <label for="phone"
+              >Telefonnummer <span class="required">*</span></label
+            >
             <input
               type="text"
+              id="phone"
               name="phone"
               placeholder="Deine Telefonnummer"
               required
             />
 
-            <label>Betreff <span class="required">*</span></label>
-            <input type="text" name="subject" placeholder="Betreff" required />
+            <label for="subject">Betreff <span class="required">*</span></label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Betreff"
+              required
+            />
 
-            <label>Ihre Nachricht</label>
+            <label for="message">Deine Nachricht</label>
             <textarea
+              id="message"
               name="message"
               rows="5"
               placeholder="Deine Nachricht"
             ></textarea>
 
-            <button type="submit" class="btn">Nachricht senden</button>
+            <button type="submit">Nachricht senden</button>
           </form>
-          <br />
+
           <p><span class="required">*</span> Pflichtfeld</p>
-          <div class="contact-details" style="text-align: center">
-            <p>Gerne kannst du mich auch telefonisch unter:</p>
-            <p><strong style="color: #be9e44">+43 664 225 09 39</strong></p>
+
+          <div class="contact-meta">
+            <p>Gerne kannst du mich auch telefonisch kontaktieren unter:</p>
+            <p><strong>+43 664 225 09 39</strong></p>
             <p>oder per E-Mail unter:</p>
             <p>
               <strong
-                ><a
-                  href="mailto:slinhart@leadership-solutions.at"
-                  style="color: #be9e44"
+                ><a href="mailto:slinhart@leadership-solutions.at"
                   >slinhart@leadership-solutions.at</a
                 ></strong
               >
@@ -324,24 +375,45 @@
         </div>
       </div>
     </div>
+
     <footer class="social-footer">
       <p>Folge mir auf Social Media:</p>
       <div class="social-icons">
-        <a href="https://www.linkedin.com/in/sabine-linhart-409a4997/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <a
+          href="https://www.linkedin.com/in/sabine-linhart-409a4997/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
           <i class="fab fa-linkedin" aria-hidden="true"></i>
           <span class="sr-only">LinkedIn</span>
         </a>
-        <a href="https://www.instagram.com/sabine.linhart_lebe.stark/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <a
+          href="https://www.instagram.com/sabine.linhart_lebe.stark/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
           <i class="fab fa-instagram" aria-hidden="true"></i>
           <span class="sr-only">Instagram</span>
         </a>
       </div>
-      <a href="https://leadership-solutions.at/impressum.html" class="impressum-link" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://leadership-solutions.at/impressum.html"
+        class="impressum-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Impressum
       </a>
-      <a href="https://leadership-solutions.at/datenschutz.html" class="impressum-link" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://leadership-solutions.at/datenschutz.html"
+        class="impressum-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Datenschutz
       </a>
-
+    </footer>
   </body>
 </html>
