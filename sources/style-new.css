@@ -16,7 +16,7 @@
   font-style: normal;
 }
 
-/* NEU: Body-Layout etwas neutraler, ohne globales text-align:center */
+/* Body wie Startseite, plus weißer Hintergrund */
 body {
   margin: 0;
   padding: 10px;
@@ -25,47 +25,24 @@ body {
   background-color: #ffffff;
 }
 
-/* NEU: Typografie – keine fixe Breite, bessere Max-Breite & Abstände */
-h1,
-h2 {
+/* Grundfarben der Überschriften wie auf index */
+h1 {
   color: #2b324d;
   font-weight: 700;
-  max-width: 980px;
-  margin: 0 auto 0.75rem;
-  padding: 10px 0;
 }
 
-/* NEU: Farben differenziert */
 h2 {
   color: #be9e44;
   font-weight: 600;
 }
 
-h3 {
-  color: #2b324d;
-}
-
-/* NEU: Grund-Absätze */
-p {
-  max-width: 980px;
-  margin: 0.25rem auto 0.75rem;
-  line-height: 1.6;
-}
-
-/* NEU: Standard-Listen */
-ul {
-  max-width: 820px;
-  margin: 0 auto 1rem;
-  padding-left: 1.1rem;
-  line-height: 1.55;
-}
-
+/* Global: alles zunächst zentriert, wie auf index */
+h1,
+h2,
+h3,
+p,
+ul,
 li {
-  margin: 0 0 0.5rem 0;
-}
-
-/* Zentrische Ausrichtung nur bei Bedarf per Klasse */
-.centered {
   text-align: center;
 }
 
@@ -74,6 +51,56 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Globale Korrektur: h1 & h2 immer zentriert und responsive */
+h1,
+h2 {
+  width: 100% !important; /* statt fixer Breite */
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 auto 16px auto !important; /* zentriert mit Abstand nach unten */
+  text-align: center !important;
+  box-sizing: border-box;
+}
+
+/* Feintuning Unter-Überschriften */
+h3 {
+  color: #2b324d;
+}
+
+/* Fließtext – bleibt zentriert, aber begrenzt in der Breite über .content-wrap */
+p {
+  line-height: 1.6;
+}
+
+/* Standard-Listen – Startseite regelt die Ausrichtung über .content-wrap & #leistungen,
+   daher hier nur Basisline-height */
+ul {
+  line-height: 1.55;
+}
+
+li {
+  margin: 0 0 0.5rem 0;
+}
+
+/* Mobile Optimierung für Überschriften – wie index */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  h2 {
+    font-size: 1.2rem !important;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  p,
+  li {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===== Spezifische Elemente Über-mich (deine bisherigen Styles) ===== */
 
 .gedanken {
   font-weight: 700;
@@ -115,6 +142,7 @@ img {
   margin-top: 10px;
 }
 
+/* Leitsatz mit Scroll-Animation */
 .leitsatz {
   font-weight: 400;
   font-size: 25px;
@@ -126,13 +154,12 @@ img {
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* NEU: Sichtbar-Zustand für Scroll-Animation */
 .leitsatz.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* CTA-Button */
+/* CTA-Button (Brandfarben) */
 .btn-primary {
   background-color: #0e2769 !important;
   border-color: #0e2769 !important;
@@ -245,6 +272,10 @@ footer.social-footer {
   padding: 16px;
 }
 
+.centered {
+  text-align: center;
+}
+
 /* Abstände */
 .spacer-sm {
   margin-top: 12px;
@@ -269,10 +300,61 @@ footer.social-footer {
   border-radius: 12px;
 }
 
-/* CTA-Button – exakt deine Farben */
+/* Typografie innerhalb content-wrap – wie index */
+.content-wrap h1,
+.content-wrap h2,
+.content-wrap h3,
+.content-wrap p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-wrap h1 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.content-wrap h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.content-wrap h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+/* Listen lesbar (links ausgerichtet), aber Block mittig */
+.content-wrap ul {
+  max-width: 820px;
+  margin: 0 auto 1rem auto;
+  text-align: left;
+  line-height: 1.55;
+}
+
+/* Listen: einheitlich Punkte, links ausgerichtet – Block mittig */
+.content-wrap ul,
+#leistungen ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 1.1rem;
+  margin: 0 auto 1rem auto;
+  max-width: 820px;
+  text-align: left;
+  line-height: 1.55;
+}
+
+.content-wrap ul li,
+#leistungen ul li {
+  position: static;
+  padding-left: 0;
+  margin: 0 0 10px 0;
+  color: #444;
+}
+
+/* CTA-Button in Sektionen */
 #cta .btn.btn-primary,
 #cta-bottom .btn.btn-primary {
-  /* NEU: auch zweiter CTA-Block angesprochen */
   background-color: #0e2769 !important;
   border-color: #0e2769 !important;
   color: #b3975a !important;
@@ -300,11 +382,6 @@ footer.social-footer {
   margin-right: auto;
 }
 
-/* Social Footer leichte Zentrier-Politur */
-footer.social-footer .social-icons {
-  justify-content: center;
-}
-
 /* Über-Header-Text */
 .under-header {
   color: #0a1633;
@@ -312,7 +389,7 @@ footer.social-footer .social-icons {
   margin-bottom: 1rem;
 }
 
-/* NEU: Werte-Grid – responsiv */
+/* Werte-Grid – responsiv */
 .werte-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -339,7 +416,7 @@ footer.social-footer .social-icons {
   margin: 0;
 }
 
-/* NEU: Werdegang-Spalten – zwei Spalten ab Tablet */
+/* Werdegang-Spalten */
 #werdegang {
   text-align: center;
   margin: 40px auto;
@@ -370,7 +447,7 @@ footer.social-footer .social-icons {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
-/* NEU: Legal-Links als Flex */
+/* Legal-Links */
 .legal-links {
   display: flex;
   justify-content: center;
@@ -391,7 +468,7 @@ footer.social-footer .social-icons {
   text-decoration: underline;
 }
 
-/* NEU: Skip-Link für Barrierefreiheit */
+/* Skip-Link */
 .skip-to-content {
   position: absolute;
   left: -9999px;
@@ -408,234 +485,17 @@ footer.social-footer .social-icons {
   border-radius: 10px;
 }
 
-/* NEU: CSS-Kommentar korrekt, plus Primary-Color-Variable */
-/* Drei Exzellenz-Blöcke – responsiv & SEO-freundlich */
-:root {
-  --primary-color: #0e2769; /* NEU: wird für mehrere Elemente genutzt */
-  --exz-border: #0e2769;
-  --exz-bg: #ffffff;
-  --exz-ink: #0b2056;
-  --exz-radius: 18px;
-}
-
-/* Exzellenz-Sektion (verwendet auf anderen Seiten) */
-.exz-section {
-  color: var(--exz-ink);
-  padding: 32px 0;
-}
-
-.exz-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-/* Grid: 1 Spalte mobil, 3 Spalten ab 960px */
-.exz-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr;
-}
-
-@media (min-width: 720px) {
-  .exz-grid {
-    grid-template-columns: repeat(2, 1fr);
+/* Responsive Feintuning Werte & Werdegang */
+@media (max-width: 768px) {
+  .werte-grid {
+    grid-template-columns: 1fr;
+  }
+  .werdegang-columns {
+    grid-template-columns: 1fr;
   }
 }
 
-@media (min-width: 960px) {
-  .exz-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Karten/Blöcke */
-.exz-card {
-  background: var(--exz-bg);
-  border: 2px solid var(--exz-border);
-  border-radius: var(--exz-radius);
-  padding: 20px;
-  margin-bottom: 28px;
-  box-shadow: 0 6px 14px rgba(14, 39, 105, 0.08);
-}
-
-.exz-card h2 {
-  font-size: 1.25rem;
-  line-height: 1.3;
-  margin: 0 0 12px;
-  color: var(--exz-border);
-}
-
-.exz-card h3 {
-  font-size: 1.05rem;
-  margin: 18px 0 8px;
-}
-
-.exz-card p {
-  margin: 0 0 10px;
-}
-
-.exz-list {
-  padding-left: 20px;
-  margin: 0 0 10px;
-}
-
-.exz-list li {
-  margin: 6px 0;
-}
-
-/* Lesbarkeit mobil */
-@media (max-width: 480px) {
-  .exz-card {
-    padding: 16px;
-  }
-  .exz-card h2 {
-    font-size: 1.15rem;
-  }
-}
-
-/* O-Töne Slider (unverändert außer Kleinigkeiten) */
-.ot-slider-section {
-  padding: 40px 16px;
-}
-
-.ot-slider-section .centered h2 {
-  margin-bottom: 18px;
-}
-
-.ot-slider {
-  position: relative;
-  max-width: 900px;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-}
-
-.ot-track {
-  display: flex;
-  transition: transform 600ms ease;
-  will-change: transform;
-}
-
-.ot-slide {
-  flex: 0 0 100%;
-  max-width: 100%;
-  padding: 28px 24px 40px;
-  display: grid;
-  place-items: center;
-  text-align: center;
-}
-
-.ot-quote {
-  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
-  line-height: 1.2;
-  font-weight: 500;
-  color: #0f172a;
-  margin: 0;
-  quotes: "„" "“" "‚" "‘";
-}
-
-.ot-quote:before {
-  content: open-quote;
-  color: #0e2769;
-  font-size: 1.6em;
-  line-height: 0;
-  vertical-align: -0.25em;
-  margin-right: 0.1em;
-}
-
-.ot-quote:after {
-  content: close-quote;
-  color: #0e2769;
-  font-size: 1.6em;
-  line-height: 0;
-  vertical-align: -0.25em;
-  margin-left: 0.05em;
-}
-
-.ot-source {
-  margin-top: 12px;
-  color: #64748b;
-  font-size: 0.95rem;
-}
-
-/* Buttons */
-.ot-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #0e2769;
-  color: #fff;
-  border: none;
-  width: 27px;
-  height: 27px;
-  border-radius: 999px;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  box-shadow: 0 6px 16px rgba(104, 36, 122, 0.25);
-  transition: transform 0.15s ease, background 0.2s ease;
-}
-
-.ot-btn:hover {
-  background: #b3975a;
-  transform: translateY(-50%) scale(1.05);
-}
-
-.ot-prev {
-  left: 12px;
-}
-
-.ot-next {
-  right: 12px;
-}
-
-/* Dots */
-.ot-dots {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 12px;
-  display: flex;
-  gap: 8px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.ot-dots button {
-  width: 7px;
-  height: 7px;
-  border-radius: 999px;
-  border: 0;
-  background: #e2e8f0;
-  cursor: pointer;
-}
-
-.ot-dots button[aria-selected="true"] {
-  background: #be9e44;
-}
-
-/* Mobile Feinschliff */
-@media (max-width: 640px) {
-  .ot-btn {
-    display: none;
-  }
-  .ot-slide {
-    padding: 24px 18px 44px;
-  }
-}
-
-/* Bewegungen respektieren */
-@media (prefers-reduced-motion: reduce) {
-  .ot-track {
-    transition: none;
-  }
-}
-
-/* Responsive Überschriften & Textgrößen */
+/* Kleiner Typografie-Feinschliff auf mittleren Breakpoints – wie index */
 @media (max-width: 992px) {
   .content-wrap h1 {
     font-size: 1.7rem;
@@ -645,15 +505,6 @@ footer.social-footer .social-icons {
   }
   .content-wrap h3 {
     font-size: 1.05rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .werte-grid {
-    grid-template-columns: 1fr;
-  }
-  .werdegang-columns {
-    grid-template-columns: 1fr;
   }
 }
 
